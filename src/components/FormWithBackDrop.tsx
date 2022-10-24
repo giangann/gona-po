@@ -1,6 +1,7 @@
 import { Button, Typography } from "@mui/material";
 import Backdrop from "@mui/material/Backdrop";
 import React from "react";
+import { CustomForm } from "./CustomForm";
 
 export const FormWithBackDrop = () => {
   const [open, setOpen] = React.useState(false);
@@ -19,7 +20,7 @@ export const FormWithBackDrop = () => {
         open={open}
         onClick={handleClose}
       >
-        <Typography>This is backdrop</Typography>
+        <CustomForm />
       </Backdrop>
     </React.Fragment>
   );

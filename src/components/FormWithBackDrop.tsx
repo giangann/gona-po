@@ -1,8 +1,9 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Hidden, Typography } from "@mui/material";
 import Backdrop from "@mui/material/Backdrop";
 import React from "react";
 import { Header } from "~/screens/Header";
 import { CustomForm } from "./CustomForm";
+import { IndicatorGroup } from "./IndicatorGroup";
 export const FormWithBackDrop = () => {
   const [open, setOpen] = React.useState(true);
   const handleClose = () => {
@@ -14,7 +15,6 @@ export const FormWithBackDrop = () => {
 
   return (
     <Box sx={{ height: "100vh", position: "relative" }}>
-      <Button onClick={handleToggle}>Toggle backdrop</Button>
       <Backdrop
         sx={{
           color: "#fff",
@@ -27,7 +27,12 @@ export const FormWithBackDrop = () => {
       >
         <Header />
         <CustomForm />
-        <Box p={3} />
+        <Box p={6} />
+        <Hidden smDown>
+          <Box sx={{ position: "absolute", top: "46vh", right: "3vw" }}>
+            <IndicatorGroup />
+          </Box>
+        </Hidden>
       </Backdrop>
     </Box>
   );

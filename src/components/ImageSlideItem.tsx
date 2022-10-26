@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { Container } from "@mui/system";
 import { useAtom } from "jotai";
 import { useInView } from "react-intersection-observer";
-import { slideHomepageAtom } from "~/libs/atom/slideAtom";
+import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 
 type Image = {
   link?: string;
@@ -12,7 +12,7 @@ type ImageSlideItemProps = {
   image: Image;
 };
 export const ImageSlideItem = (props: ImageSlideItemProps) => {
-  const [indexAtom, setIndexAtom] = useAtom(slideHomepageAtom);
+  const [indexAtom, setIndexAtom] = useAtom(activeHompageSlideAtom);
   const { image } = props;
   const { ref: slideRef, inView: slideRefVisible } = useInView();
 
@@ -26,8 +26,8 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
       sx={{
         height: "100vh",
         width: "100vw",
-        py: 4,
-        px: "32px !important",
+        py: { xs: 1, sm: 4 },
+        px: { xs: 0, sm: "32px !important" },
         maxWidth: "100% !important",
         margin: 0,
         backgroundColor: "black",

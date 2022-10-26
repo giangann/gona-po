@@ -1,5 +1,6 @@
 import { Box, Button, Stack, styled, Typography } from "@mui/material";
 import { sampleFormData } from "~/constants/form";
+import { Header } from "~/screens/Header";
 
 export const CustomForm = () => {
   const demoData = sampleFormData[0];
@@ -24,9 +25,7 @@ export const CustomForm = () => {
         sx={{ display: "flex", justifyContent: "center" }}
       >
         <FormButton>
-          <ThickTypo>
-            Trip details
-          </ThickTypo>
+          <ThickTypo>Trip details</ThickTypo>
         </FormButton>
       </Box>
     </Box>

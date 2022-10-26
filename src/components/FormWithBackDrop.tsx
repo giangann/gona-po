@@ -14,26 +14,24 @@ export const FormWithBackDrop = () => {
   };
 
   return (
-    <Box sx={{ height: "100vh", position: "relative" }}>
-      <Backdrop
-        sx={{
-          color: "#fff",
-          zIndex: (theme) => theme.zIndex.drawer - 5,
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-        open={open}
-        // onClick={handleClose}
-      >
-        <Header />
-        <CustomForm />
-        <Box p={6} />
-        <Hidden smDown>
-          <Box sx={{ position: "absolute", top: "46vh", right: "3vw" }}>
-            <IndicatorGroup />
-          </Box>
-        </Hidden>
-      </Backdrop>
-    </Box>
+    <Backdrop
+      sx={{
+        color: "#fff",
+        zIndex: (theme) => theme.zIndex.drawer - 5,
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+      open={open}
+      // onClick={handleClose}
+    >
+      <Header />
+      <CustomForm />
+      <Box p={6} />
+      <Hidden smDown>
+        <Box sx={{ position: "absolute", top: "46vh", right: "3vw" }}>
+          <IndicatorGroup />
+        </Box>
+      </Hidden>
+    </Backdrop>
   );
 };

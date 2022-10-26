@@ -1,11 +1,21 @@
 import { Box } from "@mui/material";
 import { Container } from "@mui/system";
+import { useInView } from "react-intersection-observer";
 
+type Image = {
+  link?: string;
+  id: number;
+};
 type ImageSlideItemProps = {
-  imageLink?: string;
+  image: Image;
 };
 export const ImageSlideItem = (props: ImageSlideItemProps) => {
-  const { imageLink } = props;
+  const { image } = props;
+  const { ref: slideRef, inView: slideRefVisible } = useInView();
+
+  if (slideRefVisible) {
+    console.log("image id", image.id);
+  }
   return (
     <Container
       maxWidth="lg"
@@ -20,9 +30,10 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
       }}
     >
       <Box
-        sx={{ width: "100%", height: "100%", objectFit:'cover' }}
+        ref={slideRef}
+        sx={{ width: "100%", height: "100%", objectFit: "cover" }}
         component="img"
-        src={imageLink}
+        src={image.link}
       ></Box>
     </Container>
   );

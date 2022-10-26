@@ -1,10 +1,9 @@
-import { Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Backdrop from "@mui/material/Backdrop";
 import React from "react";
 import { CustomForm } from "./CustomForm";
-import AcUnitIcon from '@mui/icons-material/AcUnit';
 export const FormWithBackDrop = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const handleClose = () => {
     setOpen(false);
   };
@@ -13,16 +12,18 @@ export const FormWithBackDrop = () => {
   };
 
   return (
-    <React.Fragment>
-      <AcUnitIcon/>
+    <Box sx={{ height: "100vh", position: "relative" }}>
       <Button onClick={handleToggle}>Toggle backdrop</Button>
       <Backdrop
-        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{
+          color: "#fff",
+          zIndex: (theme) => theme.zIndex.drawer - 5,
+        }}
         open={open}
-        onClick={handleClose}
+        // onClick={handleClose}
       >
         <CustomForm />
       </Backdrop>
-    </React.Fragment>
+    </Box>
   );
 };

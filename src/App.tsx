@@ -1,16 +1,14 @@
-import Hello from "~/components/Hello";
-import { FormWithBackDrop } from "./components/FormWithBackDrop";
-import { ImageSlideItem } from "./components/ImageSlideItem";
-import { imageSlideHomePage } from "./constants/images";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./screens/Home";
+import { SlideFullPage } from "./screens/SlideFullPage";
 
 function App() {
+
   return (
-    <>
-      <FormWithBackDrop />
-      {imageSlideHomePage.map((item, index) => (
-        <ImageSlideItem key={index} imageLink={item} />
-      ))}
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/slide" element={<SlideFullPage />} />
+    </Routes>
   );
 }
 

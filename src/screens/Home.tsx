@@ -11,7 +11,6 @@ export const Home = () => {
 
   return (
     <>
-      <Header />
       <FormWithBackDrop />
       {imageSlideHomePage.map((item, index) => (
         <ImageSlideItem key={index} image={item} />

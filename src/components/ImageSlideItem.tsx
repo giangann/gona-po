@@ -1,6 +1,8 @@
 import { Box } from "@mui/material";
 import { Container } from "@mui/system";
+import { useAtom } from "jotai";
 import { useInView } from "react-intersection-observer";
+import { slideHomepageAtom } from "~/libs/atom/slideAtom";
 
 type Image = {
   link?: string;
@@ -10,11 +12,13 @@ type ImageSlideItemProps = {
   image: Image;
 };
 export const ImageSlideItem = (props: ImageSlideItemProps) => {
+  const [indexAtom, setIndexAtom] = useAtom(slideHomepageAtom);
   const { image } = props;
   const { ref: slideRef, inView: slideRefVisible } = useInView();
 
   if (slideRefVisible) {
     console.log("image id", image.id);
+    setIndexAtom(image.id);
   }
   return (
     <Container

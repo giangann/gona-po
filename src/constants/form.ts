@@ -24,3 +24,5 @@ export const sampleFormData = [
     price: "From $6,250 pp dbl. occ.",
   },
 ];
+
+export const DEFAULT_INDEX = 0

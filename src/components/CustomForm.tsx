@@ -1,9 +1,12 @@
 import { Box, Button, Stack, styled, Typography } from "@mui/material";
+import { useAtom } from "jotai";
 import { sampleFormData } from "~/constants/form";
+import { slideHomepageAtom } from "~/libs/atom/slideAtom";
 import { Header } from "~/screens/Header";
 
 export const CustomForm = () => {
-  const demoData = sampleFormData[0];
+  const [index] = useAtom(slideHomepageAtom);
+  const demoData = sampleFormData[index];
   return (
     <Box sx={{ minWidth: 350 }} border="2px solid white">
       <Stack spacing={2} p={3}>

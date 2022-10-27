@@ -29,12 +29,6 @@ export const Footer = () => {
   const { ref: footerRef, inView: footerRefVisible } = useInView();
   const [isShowBackdrop, setIsShowBackdrop] = useAtom(displayBackdropAtom);
 
-  if (footerRefVisible) {
-    setIsShowBackdrop(false);
-  } else {
-    setIsShowBackdrop(true);
-  }
-
   const gridFull = { xs: 12 };
   const grid = { xs: 12, sm: 4 };
   return (

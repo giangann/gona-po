@@ -45,15 +45,16 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
         maxWidth: "100% !important",
         margin: 0,
         backgroundColor: "black",
-        position: "relative",
+        // position: "relative",
       }}
     >
       <Box
+        ref={slideRef}
         sx={{ width: "100%", height: "100%", objectFit: "cover" }}
         component="img"
         src={image.link}
       ></Box>
-      <BoxForRef ref={slideRef} />
+      {/* <BoxForRef ref={slideRef} /> */}
     </Container>
   );
 };

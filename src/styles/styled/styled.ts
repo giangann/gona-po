@@ -8,6 +8,7 @@ export const HeaderLogoText = styled(Typography)({
   margin: 0,
   textAlign: "center",
   fontStyle: "italic",
+  color: "white",
 });
 
 export const BannerTitleText = styled(Typography)({

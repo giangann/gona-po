@@ -12,11 +12,8 @@ export const CustomForm = () => {
   return (
     <Box
       sx={{
-        // position: "absolute",
-        // bottom: "20vh",
-        // left: "40vw",
-        minWidth: { xs: 200, sm: 350 },
-        zIndex: 1000,
+        zIndex: 200,
+        width: { xs: 200, sm: 350 },
       }}
       border="2px solid white"
     >

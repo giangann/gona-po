@@ -9,7 +9,11 @@ export const IndicatorGroup = () => {
   return (
     <Stack spacing={1}>
       {imageSlideHomePage.map((item, index) =>
-        index === activeSlide ? <IcRoundCircle /> : <IcOutlineCircle />
+        index === activeSlide ? (
+          <IcRoundCircle color="white" fontSize={12} />
+        ) : (
+          <IcOutlineCircle color="white" fontSize={12} />
+        )
       )}
     </Stack>
   );

@@ -11,11 +11,17 @@ export const HeaderLogoText = styled(Typography)({
   color: "white",
 });
 
-export const BannerTitleText = styled(Typography)({
+export const BannerTitleText = styled(Typography)(({ theme }) => ({
+  textTransform: "uppercase",
   fontWeight: 900,
-  fontSize: 48,
+  fontSize: 60,
   letterSpacing: 2,
-});
+  color: "white",
+
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 48,
+  },
+}));
 
 export const ThinTypo = styled(Typography)({
   fontWeight: 200,
@@ -58,3 +64,27 @@ export const BoxForRef = styled(Box)({
   top: "50vh",
   right: "2vw",
 });
+
+export const BoxLayer = styled(Box)({
+  position: "absolute",
+  display: "flex",
+  alignItem: "center",
+  justifyContent: "center",
+  width: "100vw",
+  height: "100vh",
+  top: 0,
+});
+
+export const BoxCenter = styled(Box)({
+  display: "flex",
+  alignItem: "center",
+  justifyContent: "center",
+});
+
+export const widthStyleResponsive = {
+  width: {
+    xs: "80%",
+    sm: "50%",
+    md: "20%",
+  },
+};

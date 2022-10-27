@@ -51,7 +51,6 @@ export const CustomLink = styled(Link)({
 
 export const WhiteOutlinedButton = styled(Button)({
   fontWeight: 400,
-  // backgroundColor: '#ffffff',
   border: "1px solid white !important",
   textTransform: "capitalize",
   textDecorationColor: "white",
@@ -86,5 +85,13 @@ export const widthStyleResponsive = {
     xs: "80%",
     sm: "50%",
     md: "20%",
+  },
+};
+
+export const fontSizeContentResponsive = {
+  fontSize: {
+    xs: 12,
+    sm: 14,
+    md: 16,
   },
 };

@@ -8,6 +8,7 @@ export const sampleFormData = [
     description: "MAKE WAVES IN COSTA RICA",
     image:
       "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+    detail: {},
   },
   {
     title: "Explore Costa Rica",
@@ -41,4 +42,148 @@ export const sampleFormData = [
   },
 ];
 
+export const sampleTripDetailData = [];
+
+export const sampleAboutData = {
+  header: {
+    image:
+      "https://eqx-assets-prod.imgix.net/images/17f4590aff6d48d5ba275c8e30fa98cb-5732_lr_morocco_hero.png?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+    avatar:
+      "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+    hello: "GonaPo xin chào",
+    trip_introduce:
+      "El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
+  },
+  content: {
+    introduce: {},
+    news: [
+      {
+        avatar:
+          "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        website: "GonaPo.com",
+        trip_duration: "14 ngày",
+        date: "13 tháng 9 năm 2007",
+        emotion: "Vui vẻ",
+        location: "Pulag",
+        content_of_blog:
+          "Leo tới đỉnh mệt bơ phờ luôn nhưng vui quá mọi người ơi",
+      },
+      {
+        avatar:
+          "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        website: "GonaPo.com",
+        trip_duration: "14 ngày",
+        date: "13 tháng 9 năm 2007",
+        emotion: "Vui vẻ",
+        location: "Pulag",
+        content_of_blog:
+          "Leo tới đỉnh mệt bơ phờ luôn nhưng vui quá mọi người ơi",
+      },
+      {
+        avatar:
+          "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        website: "GonaPo.com",
+        trip_duration: "14 ngày",
+        date: "13 tháng 9 năm 2007",
+        emotion: "Vui vẻ",
+        location: "Pulag",
+        content_of_blog:
+          "Leo tới đỉnh mệt bơ phờ luôn nhưng vui quá mọi người ơi",
+      },
+      {
+        avatar:
+          "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        website: "GonaPo.com",
+        trip_duration: "14 ngày",
+        date: "13 tháng 9 năm 2007",
+        emotion: "Vui vẻ",
+        location: "Pulag",
+        content_of_blog:
+          "Leo tới đỉnh mệt bơ phờ luôn nhưng vui quá mọi người ơi",
+      },
+    ],
+    album_image: [
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+      {
+        image:
+          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        title: "Ngắm bình minh núi Pulag",
+        date: "Ngày 22 tháng 9 năm 2022",
+      },
+    ],
+  },
+};
 export const DEFAULT_INDEX = 0;

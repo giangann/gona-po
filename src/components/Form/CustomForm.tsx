@@ -4,7 +4,7 @@ import { sampleFormData } from "~/constants/form";
 import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 import { Header } from "~/screens/Header";
 import { FormButton, ThickTypo, ThinTypo } from "~/styles/styled/styled";
-import { IcRoundCircle, IcOutlineCircle } from "./Icons";
+import { IcRoundCircle, IcOutlineCircle } from "../Icons";
 
 export const CustomForm = () => {
   const [index] = useAtom(activeHompageSlideAtom);

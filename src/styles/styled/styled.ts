@@ -1,12 +1,19 @@
-import { Button, styled, Typography } from "@mui/material";
+import { Box, Button, styled, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const HeaderLogoText = styled(Typography)({
-  fontWeight: 900,
-  letterSpacing: 5,
-  fontSize: 40,
+  fontWeight: 500,
+  letterSpacing: 1,
+  fontSize: 32,
   margin: 0,
   textAlign: "center",
+  fontStyle: "italic",
+});
+
+export const BannerTitleText = styled(Typography)({
+  fontWeight: 900,
+  fontSize: 48,
+  letterSpacing: 2,
 });
 
 export const ThinTypo = styled(Typography)({
@@ -43,4 +50,10 @@ export const WhiteOutlinedButton = styled(Button)({
   textDecorationColor: "white",
   height: "100%",
   color: "white",
+});
+
+export const BoxForRef = styled(Box)({
+  position: "absolute",
+  top: "50vh",
+  right: "2vw",
 });

@@ -1,8 +1,13 @@
 import { Box } from "@mui/material";
 import { Container } from "@mui/system";
 import { useAtom } from "jotai";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
+import {
+  activeHompageSlideAtom,
+  displayBackdropAtom,
+} from "~/libs/atom/slideAtom";
+import { BoxForRef } from "~/styles/styled/styled";
 
 type Image = {
   link?: string;
@@ -13,6 +18,8 @@ type ImageSlideItemProps = {
 };
 export const ImageSlideItem = (props: ImageSlideItemProps) => {
   const [indexAtom, setIndexAtom] = useAtom(activeHompageSlideAtom);
+  const [isShowBackdrop, setIsShowBackdrop] = useAtom(displayBackdropAtom);
+
   const { image } = props;
   const { ref: slideRef, inView: slideRefVisible } = useInView();
 
@@ -20,6 +27,13 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
     console.log("image id", image.id);
     setIndexAtom(image.id);
   }
+
+  useEffect(() => {
+    console.log("slideRefVisible", slideRefVisible);
+    if (slideRefVisible) {
+      setIsShowBackdrop(true);
+    }
+  }, []);
   return (
     <Container
       maxWidth="lg"
@@ -39,10 +53,7 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
         component="img"
         src={image.link}
       ></Box>
-      <Box
-        ref={slideRef}
-        sx={{ position: "absolute", top: "50vh", right: "2vw" }}
-      />
+      <BoxForRef ref={slideRef} />
     </Container>
   );
 };

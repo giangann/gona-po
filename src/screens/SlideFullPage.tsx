@@ -65,7 +65,7 @@ export const SlideFullPage = () => {
             <div>
               {imageSlideHomePage.map((item, index) => (
                 <div className="section">
-                  <ImageSlideItem key={index} imageLink={item} />
+                  <ImageSlideItem key={index} image={item} />
                 </div>
               ))}
             </div>

@@ -4,13 +4,11 @@ import { useAtom } from "jotai";
 import React, { useEffect } from "react";
 import { displayBackdropAtom } from "~/libs/atom/slideAtom";
 import { Header } from "~/screens/Header";
-import { CustomForm } from "./CustomForm";
+import { CustomForm } from "./Form/CustomForm";
 import { IndicatorGroup } from "./IndicatorGroup";
 export const FormWithBackDrop = () => {
   const [isShowBackdrop, setIsShowBackdrop] = useAtom(displayBackdropAtom);
-  useEffect(() => {
-    setIsShowBackdrop(true);
-  }, []);
+  console.log("isShowBackdrop", isShowBackdrop);
   return (
     <Backdrop
       sx={{
@@ -23,6 +21,7 @@ export const FormWithBackDrop = () => {
       // onClick={handleClose}
     >
       <Header />
+
       <CustomForm />
       <Box p={6} />
       <Hidden smDown>

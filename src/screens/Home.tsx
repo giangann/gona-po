@@ -5,7 +5,7 @@ import { imageBanner, imageSlideHomePage } from "~/constants/images";
 import "../index.css";
 import { Banner } from "./Banner";
 import { Header } from "./Header";
-import { CustomForm } from "../components/CustomForm";
+import { CustomForm } from "../components/Form/CustomForm";
 import { backgroundColor } from "~/styles/colors";
 export const Home = () => {
   const handleInView = (ref: any) => {
@@ -32,7 +32,7 @@ export const Home = () => {
       <Banner />
       {imageSlideHomePage.map((item, index: any) => (
         <ImageSlideItem key={index} image={item} />
-      ))}
+      ))} 
     </Box>
   );
 };

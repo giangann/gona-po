@@ -1,13 +1,8 @@
 import { Box } from "@mui/material";
 import { Container } from "@mui/system";
 import { useAtom } from "jotai";
-import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import {
-  activeHompageSlideAtom,
-  displayBackdropAtom,
-} from "~/libs/atom/slideAtom";
-import { BoxForRef } from "~/styles/styled/styled";
+import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 
 type Image = {
   link?: string;
@@ -38,7 +33,6 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
         maxWidth: "100% !important",
         margin: 0,
         backgroundColor: "black",
-        // position: "relative",
       }}
     >
       <Box

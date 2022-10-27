@@ -1,14 +1,11 @@
 import {
   Box,
-  Button,
   Container,
   Grid,
   IconButton,
   Stack,
   styled,
 } from "@mui/material";
-import { useAtom } from "jotai";
-import { useInView } from "react-intersection-observer";
 import { CustomizedTextField } from "~/components/CustomInput";
 import {
   BrandicoTwitter,
@@ -17,7 +14,6 @@ import {
   PhInstagramLogoFill,
 } from "~/components/Icons";
 import { MENU_FOOTER } from "~/constants/footer";
-import { displayBackdropAtom } from "~/libs/atom/slideAtom";
 import {
   CustomLink,
   ThickTypo,
@@ -26,9 +22,6 @@ import {
 } from "~/styles/styled/styled";
 
 export const Footer = () => {
-  const { ref: footerRef, inView: footerRefVisible } = useInView();
-  const [isShowBackdrop, setIsShowBackdrop] = useAtom(displayBackdropAtom);
-
   const gridFull = { xs: 12 };
   const grid = { xs: 12, sm: 4 };
   return (
@@ -62,9 +55,6 @@ export const Footer = () => {
                 />
               </Grid>
               <Grid item {...gridFull}>
-                {/* <Button fullWidth variant = "outlined">
-                <WhiteTypo>Đăng ký</WhiteTypo>
-              </Button> */}
                 <WhiteOutlinedButton
                   sx={{ height: 56 }}
                   fullWidth
@@ -101,7 +91,7 @@ export const Footer = () => {
               </Stack>
             </Grid>
             <Grid item {...grid}>
-              <Stack spacing={1} ref={footerRef}>
+              <Stack spacing={1}>
                 {MENU_FOOTER.map((item, index) => (
                   <CustomLink to={item.link}>
                     <WhiteTypo sx={{ textTransform: "uppercase" }}>

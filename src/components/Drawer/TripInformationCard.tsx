@@ -1,7 +1,7 @@
 import { Box, Stack } from "@mui/material";
 import { ThickTypo } from "~/styles/styled/styled";
 
-type TripInformationCardProps = {
+export type TripInformationCardProps = {
   image?: string;
   title?: string;
   date?: string;

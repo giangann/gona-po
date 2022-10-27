@@ -10,7 +10,16 @@ export const CustomForm = () => {
   const [index] = useAtom(activeHompageSlideAtom);
   const demoData = sampleFormData[index];
   return (
-    <Box sx={{ minWidth: { xs: 200, sm: 350 } }} border="2px solid white">
+    <Box
+      sx={{
+        // position: "absolute",
+        // bottom: "20vh",
+        // left: "40vw",
+        minWidth: { xs: 200, sm: 350 },
+        zIndex: 1000,
+      }}
+      border="2px solid white"
+    >
       <Stack spacing={2} p={3}>
         <ThickTypo>{demoData.title}</ThickTypo>
 

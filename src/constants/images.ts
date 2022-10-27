@@ -16,3 +16,6 @@ export const imageSlideHomePage = [
     link: "https://eqx-assets-prod.imgix.net/images/17f4590aff6d48d5ba275c8e30fa98cb-5732_lr_morocco_hero.png?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
   },
 ];
+
+export const imageBanner =
+  "https://eqx-assets-prod.imgix.net/images/d9c7ae4a2c9348e7a60fc93d470d9fe2-a03fcfd9cc2c41b4bc5c3fd59e073dde-img_6170-20.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946";

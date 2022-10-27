@@ -1,18 +1,16 @@
 import { Box, Button, Hidden, Typography } from "@mui/material";
 import Backdrop from "@mui/material/Backdrop";
-import React from "react";
+import { useAtom } from "jotai";
+import React, { useEffect } from "react";
+import { displayBackdropAtom } from "~/libs/atom/slideAtom";
 import { Header } from "~/screens/Header";
 import { CustomForm } from "./CustomForm";
 import { IndicatorGroup } from "./IndicatorGroup";
 export const FormWithBackDrop = () => {
-  const [open, setOpen] = React.useState(true);
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
+  const [isShowBackdrop, setIsShowBackdrop] = useAtom(displayBackdropAtom);
+  useEffect(() => {
+    setIsShowBackdrop(true);
+  }, []);
   return (
     <Backdrop
       sx={{
@@ -21,7 +19,7 @@ export const FormWithBackDrop = () => {
         flexDirection: "column",
         justifyContent: "space-between",
       }}
-      open={open}
+      open={isShowBackdrop}
       // onClick={handleClose}
     >
       <Header />

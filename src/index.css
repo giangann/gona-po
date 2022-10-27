@@ -31,3 +31,15 @@ h3 {
 .fp-watermark {
   display: none;
 }
+
+.overlay {
+  background-color: "#000000";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  opacity: 0.3;
+  z-index: 999;
+}

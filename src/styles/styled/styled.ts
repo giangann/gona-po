@@ -1,4 +1,5 @@
 import { Button, styled, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const HeaderLogoText = styled(Typography)({
   fontWeight: 900,
@@ -27,5 +28,19 @@ export const FormButton = styled(Button)({
 });
 
 export const WhiteTypo = styled(Typography)({
+  color: "white",
+});
+
+export const CustomLink = styled(Link)({
+  textDecoration: "none",
+});
+
+export const WhiteOutlinedButton = styled(Button)({
+  fontWeight: 400,
+  // backgroundColor: '#ffffff',
+  border: "1px solid white !important",
+  textTransform: "capitalize",
+  textDecorationColor: "white",
+  height: "100%",
   color: "white",
 });

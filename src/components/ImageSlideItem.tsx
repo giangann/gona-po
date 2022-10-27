@@ -18,7 +18,6 @@ type ImageSlideItemProps = {
 };
 export const ImageSlideItem = (props: ImageSlideItemProps) => {
   const [indexAtom, setIndexAtom] = useAtom(activeHompageSlideAtom);
-  const [isShowBackdrop, setIsShowBackdrop] = useAtom(displayBackdropAtom);
 
   const { image } = props;
   const { ref: slideRef, inView: slideRefVisible } = useInView();
@@ -28,12 +27,6 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
     setIndexAtom(image.id);
   }
 
-  useEffect(() => {
-    console.log("slideRefVisible", slideRefVisible);
-    if (slideRefVisible) {
-      setIsShowBackdrop(true);
-    }
-  }, []);
   return (
     <Container
       maxWidth="lg"
@@ -49,12 +42,19 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
       }}
     >
       <Box
-        ref={slideRef}
-        sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+        sx={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+        }}
         component="img"
         src={image.link}
       ></Box>
-      {/* <BoxForRef ref={slideRef} /> */}
+      <Box
+        className="refBox"
+        sx={{ position: "relative", top: "-50vh" }}
+        ref={slideRef}
+      />
     </Container>
   );
 };

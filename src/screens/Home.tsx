@@ -25,6 +25,7 @@ export const Home = () => {
             width: "100vw",
             backgroundColor: "black",
             opacity: 0.3,
+            // zIndex: -100,
           }}
         />
         <Box sx={{ position: "absolute", height: "100%", width: "100vw" }}>

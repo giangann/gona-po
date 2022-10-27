@@ -18,7 +18,7 @@ export const red = {
   }
   
   export const backgroundColor = {
-    primary: '#191F3A',
+    primary: '#000000',
     main: '#0C1023',
     chip: '#252B44',
     // chipHover: '#2F365F',

@@ -1,29 +1,60 @@
 import { Box } from "@mui/material";
 import { Container } from "@mui/system";
+import { useAtom } from "jotai";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import {
+  activeHompageSlideAtom,
+  displayBackdropAtom,
+} from "~/libs/atom/slideAtom";
+import { BoxForRef } from "~/styles/styled/styled";
 
+type Image = {
+  link?: string;
+  id: number;
+};
 type ImageSlideItemProps = {
-  imageLink?: string;
+  image: Image;
 };
 export const ImageSlideItem = (props: ImageSlideItemProps) => {
-  const { imageLink } = props;
+  const [indexAtom, setIndexAtom] = useAtom(activeHompageSlideAtom);
+
+  const { image } = props;
+  const { ref: slideRef, inView: slideRefVisible } = useInView();
+
+  if (slideRefVisible) {
+    console.log("image id", image.id);
+    setIndexAtom(image.id);
+  }
+
   return (
     <Container
       maxWidth="lg"
       sx={{
         height: "100vh",
         width: "100vw",
-        py: 4,
-        px: "32px !important",
+        py: { xs: 1, sm: 4 },
+        px: { xs: 0, sm: "32px !important" },
         maxWidth: "100% !important",
         margin: 0,
         backgroundColor: "black",
+        // position: "relative",
       }}
     >
       <Box
-        sx={{ width: "100%", height: "100%", objectFit:'cover' }}
+        sx={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+        }}
         component="img"
-        src={imageLink}
+        src={image.link}
       ></Box>
+      <Box
+        className="refBox"
+        sx={{ position: "relative", top: "-50vh" }}
+        ref={slideRef}
+      />
     </Container>
   );
 };

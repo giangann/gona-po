@@ -1,29 +1,34 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Hidden, Typography } from "@mui/material";
 import Backdrop from "@mui/material/Backdrop";
-import React from "react";
-import { CustomForm } from "./CustomForm";
+import { useAtom } from "jotai";
+import React, { useEffect } from "react";
+import { displayBackdropAtom } from "~/libs/atom/slideAtom";
+import { Header } from "~/screens/Header";
+import { CustomForm } from "./Form/CustomForm";
+import { IndicatorGroup } from "./IndicatorGroup";
 export const FormWithBackDrop = () => {
-  const [open, setOpen] = React.useState(true);
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
+  const [isShowBackdrop, setIsShowBackdrop] = useAtom(displayBackdropAtom);
+  console.log("isShowBackdrop", isShowBackdrop);
   return (
-    <Box sx={{ height: "100vh", position: "relative" }}>
-      <Button onClick={handleToggle}>Toggle backdrop</Button>
-      <Backdrop
-        sx={{
-          color: "#fff",
-          zIndex: (theme) => theme.zIndex.drawer - 5,
-        }}
-        open={open}
-        // onClick={handleClose}
-      >
-        <CustomForm />
-      </Backdrop>
-    </Box>
+    <Backdrop
+      sx={{
+        color: "#fff",
+        zIndex: (theme) => theme.zIndex.drawer - 5,
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+      open={isShowBackdrop}
+      // onClick={handleClose}
+    >
+      <Header />
+
+      <CustomForm />
+      <Box p={6} />
+      <Hidden smDown>
+        <Box sx={{ position: "absolute", top: "46vh", right: "3vw" }}>
+          <IndicatorGroup />
+        </Box>
+      </Hidden>
+    </Backdrop>
   );
 };

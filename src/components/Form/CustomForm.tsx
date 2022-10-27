@@ -1,11 +1,22 @@
 import { Box, Button, Stack, styled, Typography } from "@mui/material";
+import { useAtom } from "jotai";
 import { sampleFormData } from "~/constants/form";
+import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 import { Header } from "~/screens/Header";
+import { FormButton, ThickTypo, ThinTypo } from "~/styles/styled/styled";
+import { IcRoundCircle, IcOutlineCircle } from "../Icons";
 
 export const CustomForm = () => {
-  const demoData = sampleFormData[0];
+  const [index] = useAtom(activeHompageSlideAtom);
+  const demoData = sampleFormData[index];
   return (
-    <Box sx={{ minWidth: 350 }} border="2px solid white">
+    <Box
+      sx={{
+        zIndex: 200,
+        width: { xs: 200, sm: 350 },
+      }}
+      border="2px solid white"
+    >
       <Stack spacing={2} p={3}>
         <ThickTypo>{demoData.title}</ThickTypo>
 
@@ -31,19 +42,3 @@ export const CustomForm = () => {
     </Box>
   );
 };
-
-const ThinTypo = styled(Typography)({
-  fontWeight: 200,
-  opacity: 0.7,
-  letterSpacing: 1,
-});
-
-const ThickTypo = styled(Typography)({
-  fontWeight: 900,
-  letterSpacing: 3,
-});
-
-const FormButton = styled(Button)({
-  color: "white",
-  fontStyle: "bold",
-});

@@ -18,10 +18,14 @@
     "@fullpage/react-fullpage": "^0.1.28",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
+    "jotai": "^1.8.6",
     "react": "^18.1.0",
+    "react-alice-carousel": "^2.6.4",
     "react-dom": "^18.1.0",
+    "react-intersection-observer": "^9.4.0",
     "react-router": "^6.4.2",
-    "react-router-dom": "^6.4.2"
+    "react-router-dom": "^6.4.2",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.9",

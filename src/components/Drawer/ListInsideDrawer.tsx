@@ -5,12 +5,14 @@ import { IcTwotoneClose } from "../Icons";
 import { CarouselItem } from "./CarouselItem";
 import { TripInformationCard } from "./TripInformationCard";
 import AliceCarousel from "react-alice-carousel";
+import { useNavigate } from "react-router";
 
 type ListInsideDrawerProps = {
   handleCloseDrawer?: () => void;
 };
 export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
   const { handleCloseDrawer } = props;
+  const navigate = useNavigate();
 
   const carouselItems = sampleFormData.map((item, index) => (
     <CarouselItem
@@ -40,10 +42,10 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
         {/* For desktop */}
         <Hidden smDown>
           <Stack direction="row" justifyContent="center" spacing={10}>
-            <Button>
+            <Button onClick={() => navigate("about")}>
               <WhiteTypo>About</WhiteTypo>
             </Button>
-            <Button>
+            <Button onClick={() => navigate("contact")}>
               <WhiteTypo>Contact</WhiteTypo>
             </Button>
           </Stack>

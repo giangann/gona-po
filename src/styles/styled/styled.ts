@@ -34,6 +34,17 @@ export const BlogTitleText = styled(Typography)(({ theme }) => ({
     fontSize: 32,
   },
 }));
+export const DescriptionTitleText = styled(Typography)(({ theme }) => ({
+  fontWeight: 900,
+  fontSize: 32,
+  color: "white",
+  textTransform:'uppercase',
+  textAlign: "left",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 24,
+  },
+}));
+
 export const ThinTypo = styled(Typography)({
   fontWeight: 200,
   opacity: 0.7,

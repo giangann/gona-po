@@ -1,5 +1,6 @@
 import { Box, Button, Stack, styled, Typography } from "@mui/material";
 import { useAtom } from "jotai";
+import { useNavigate } from "react-router";
 import { sampleFormData } from "~/constants/form";
 import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 import { Header } from "~/screens/Header";
@@ -14,6 +15,11 @@ import { IcRoundCircle, IcOutlineCircle } from "../Icons";
 export const CustomForm = () => {
   const [index] = useAtom(activeHompageSlideAtom);
   const demoData = sampleFormData[index];
+  const navigate = useNavigate();
+
+  const handleNavigateTripDetail = () => {
+    navigate(`trip/${demoData.slug}`);
+  };
   return (
     <Stack spacing={2} alignItems="center" sx={{ ...widthStyleResponsive }}>
       <ThickTypo sx={{ textAlign: "center", fontSize: 32 }}>
@@ -43,7 +49,7 @@ export const CustomForm = () => {
           borderTop="1px solid white"
           sx={{ display: "flex", justifyContent: "center" }}
         >
-          <FormButton>
+          <FormButton onClick={handleNavigateTripDetail}>
             <ThickTypo>Trip details</ThickTypo>
           </FormButton>
         </Box>

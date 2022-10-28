@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import { DEFAULT_ACTIVE_TAB_ABOUT } from "~/constants/constants";
 import { AboutHeader } from "./AboutHeader";
-import { AlbumImage } from "./AlbumImage";
+import { ListAlbumImage } from "./ListAlbumImage";
 import { News } from "./News";
 
 export const About = () => {
@@ -22,7 +22,7 @@ export const About = () => {
     {
       id: 2,
       title: "Album ảnh",
-      element: <AlbumImage />,
+      element: <ListAlbumImage />,
       isActive: false,
     },
   ];

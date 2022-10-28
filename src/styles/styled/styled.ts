@@ -23,6 +23,17 @@ export const BannerTitleText = styled(Typography)(({ theme }) => ({
   },
 }));
 
+export const BlogTitleText = styled(Typography)(({ theme }) => ({
+  fontWeight: 400,
+  fontSize: 48,
+  letterSpacing: 2,
+  color: "white",
+  textAlign: "center",
+
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 32,
+  },
+}));
 export const ThinTypo = styled(Typography)({
   fontWeight: 200,
   opacity: 0.7,

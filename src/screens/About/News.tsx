@@ -85,16 +85,16 @@ export const News = () => {
   );
 };
 
-const NewsTitle = styled(Typography)(({ theme }) => ({
+export const NewsTitle = styled(Typography)(({ theme }) => ({
   fontSize: 18,
   fontWeight: 400,
   color: "white",
   [theme.breakpoints.down("sm")]: {
-    fontSize: 16,
+    fontSize: 14,
   },
 }));
 
-const NewsDate = styled(Typography)(({ theme }) => ({
+export const NewsDate = styled(Typography)(({ theme }) => ({
   opacity: 0.7,
   fontSize: 14,
   fontWeight: 200,
@@ -104,7 +104,7 @@ const NewsDate = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const NewsContent = styled(Typography)(({ theme }) => ({
+export const NewsContent = styled(Typography)(({ theme }) => ({
   fontSize: 16,
   fontWeight: 400,
   color: "white",

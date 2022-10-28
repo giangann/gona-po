@@ -2,11 +2,17 @@ import { Box, Stack } from "@mui/material";
 import { sampleAboutData } from "~/constants/form";
 import {
   fontSizeContentResponsive,
+  WhiteFilledButton,
   WhiteOutlinedButton,
 } from "~/styles/styled/styled";
 
-export const AboutHeader = () => {
+export const AboutHeader = ({
+  tabElement,
+  handleToggleTab,
+  activeTabId,
+}: any) => {
   const headerData = sampleAboutData.header;
+  console.log("tab Element", tabElement);
   return (
     <Box sx={{ position: "relative", mb: 10 }}>
       <Box
@@ -42,35 +48,38 @@ export const AboutHeader = () => {
           <Stack
             direction="row"
             spacing={{ xs: 1, sm: 3 }}
-            sx={{ position: "relative", bottom: { xs:5, sm: 20 } }}
+            sx={{ position: "relative", bottom: { xs: 5, sm: 20 } }}
           >
-            <WhiteOutlinedButton
-              sx={{
-                height: "fit-content",
-                py: 0,
-                ...fontSizeContentResponsive,
-              }}
-            >
-              Giới thiệu
-            </WhiteOutlinedButton>
-            <WhiteOutlinedButton
-              sx={{
-                height: "fit-content",
-                py: 0,
-                ...fontSizeContentResponsive,
-              }}
-            >
-              Bản tin
-            </WhiteOutlinedButton>
-            <WhiteOutlinedButton
-              sx={{
-                height: "fit-content",
-                py: 0,
-                ...fontSizeContentResponsive,
-              }}
-            >
-              Album ảnh
-            </WhiteOutlinedButton>
+            {tabElement.map((item: any, index: any) =>
+              item.id === activeTabId ? (
+                <WhiteFilledButton
+                  variant="contained"
+                  key={index}
+                  id={item.id}
+                  sx={{
+                    height: "fit-content",
+                    py: 0,
+                    ...fontSizeContentResponsive,
+                  }}
+                  onClick={() => handleToggleTab(index)}
+                >
+                  {item.title}
+                </WhiteFilledButton>
+              ) : (
+                <WhiteOutlinedButton
+                  key={index}
+                  id={item.id}
+                  sx={{
+                    height: "fit-content",
+                    py: 0,
+                    ...fontSizeContentResponsive,
+                  }}
+                  onClick={() => handleToggleTab(index)}
+                >
+                  {item.title}
+                </WhiteOutlinedButton>
+              )
+            )}
           </Stack>
         </Stack>
       </Box>

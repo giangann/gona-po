@@ -58,6 +58,19 @@ export const WhiteOutlinedButton = styled(Button)({
   color: "white",
 });
 
+export const WhiteFilledButton = styled(Button)({
+  fontWeight: 400,
+  border: "1px solid white !important",
+  textTransform: "capitalize",
+  textDecorationColor: "white",
+  height: "100%",
+  color: "black",
+  backgroundColor: "white",
+  "&:hover": {
+    backgroundColor: "white",
+  },
+});
+
 export const BoxForRef = styled(Box)({
   position: "absolute",
   top: "50vh",

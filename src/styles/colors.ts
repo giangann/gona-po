@@ -6,7 +6,7 @@ export const red = {
     primary: '#16C784',
   }
   export const yellow = {
-    primary: '#FECD57',
+    primary: '#E8BC59',
   }
   
   export const blue = {

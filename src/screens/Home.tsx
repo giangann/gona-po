@@ -7,10 +7,6 @@ import { Header } from "./Header";
 import { CustomForm } from "../components/Form/CustomForm";
 import { IndicatorGroup } from "~/components/IndicatorGroup";
 export const Home = () => {
-  const handleInView = (ref: any) => {
-    console.log(ref);
-  };
-
   return (
     <Box>
       <Header />
@@ -23,7 +19,6 @@ export const Home = () => {
             width: "100vw",
             backgroundColor: "black",
             opacity: 0.3,
-            // zIndex: -100,
           }}
         />
         <Box sx={{ position: "absolute", height: "100%", width: "100vw" }}>

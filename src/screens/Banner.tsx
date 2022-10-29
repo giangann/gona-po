@@ -38,7 +38,7 @@ export const Banner = () => {
         <Box
           sx={{
             position: "absolute",
-            bottom: { xs: 50},
+            bottom: { xs: 50  },
           }}
         >
           <IconButton>

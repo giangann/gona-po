@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Hidden } from "@mui/material";
 import { ImageSlideItem } from "~/components/ImageSlideItem";
 import { imageBanner, imageSlideHomePage } from "~/constants/images";
 import "../index.css";
@@ -34,16 +34,18 @@ export const Home = () => {
               left: 0,
             }}
           >
-            <Box
-              className="indicator"
-              sx={{
-                position: "absolute",
-                top: "45vh",
-                right: "3vw",
-              }}
-            >
-              <IndicatorGroup />
-            </Box>
+            <Hidden smDown>
+              <Box
+                className="indicator"
+                sx={{
+                  position: "absolute",
+                  top: "45vh",
+                  right: "3vw",
+                }}
+              >
+                <IndicatorGroup />
+              </Box>
+            </Hidden>
             <CustomForm />
           </Box>{" "}
         </Box>

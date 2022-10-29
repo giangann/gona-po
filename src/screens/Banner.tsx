@@ -1,5 +1,6 @@
-import { Box } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import React, { useEffect } from "react";
+import { IcTwotoneKeyboardArrowDown } from "~/components/Icons";
 import { BANNER_TITLE } from "~/constants/constants";
 import { imageBanner } from "~/constants/images";
 import { BannerTitleText, BoxCenter, BoxLayer } from "~/styles/styled/styled";
@@ -9,7 +10,7 @@ export const Banner = () => {
     <Box
       sx={{
         position: "sticky",
-        zIndex: -100,
+        zIndex: 1,
         top: 0,
       }}
     >
@@ -34,6 +35,18 @@ export const Banner = () => {
         >
           {BANNER_TITLE}
         </BannerTitleText>
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: { xs: 50},
+          }}
+        >
+          <IconButton>
+            <a href="#scroll">
+              <IcTwotoneKeyboardArrowDown fontSize={50} />
+            </a>
+          </IconButton>
+        </Box>
       </BoxLayer>
     </Box>
   );

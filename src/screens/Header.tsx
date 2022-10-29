@@ -15,7 +15,7 @@ export const Header = () => {
     setOpenHeaderDrawer(false);
   };
   return (
-    <Box sx={{ position: "fixed", top: 0, zIndex: 100 }} width="100%">
+    <Box sx={{ position: "fixed", top: 0, zIndex: 3 }} width="100%">
       <Container>
         <Box p={5}>
           <HeaderLogoText>GonaPo</HeaderLogoText>

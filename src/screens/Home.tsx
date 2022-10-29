@@ -6,12 +6,13 @@ import { Banner } from "./Banner";
 import { Header } from "./Header";
 import { CustomForm } from "../components/Form/CustomForm";
 import { IndicatorGroup } from "~/components/IndicatorGroup";
+import { Footer } from "./Footer";
 export const Home = () => {
   return (
-    <Box>
+    <>
       <Header />
       <Banner />
-      <Box sx={{ position: "relative" }}>
+      <Box sx={{ position: "relative", zIndex: 2 }}>
         <Box
           sx={{
             position: "absolute",
@@ -46,10 +47,12 @@ export const Home = () => {
             <CustomForm />
           </Box>{" "}
         </Box>
-        {imageSlideHomePage.map((item, index: any) => (
-          <ImageSlideItem key={index} image={item} />
-        ))}
+        <Box id="scroll">
+          {imageSlideHomePage.map((item, index: any) => (
+            <ImageSlideItem key={index} image={item} />
+          ))}
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 };

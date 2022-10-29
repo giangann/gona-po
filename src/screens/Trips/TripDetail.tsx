@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material";
 import { useAtom } from "jotai";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
 import { BaseForm } from "~/components/Form/BaseForm";
 import { sampleFormData } from "~/constants/form";
@@ -8,6 +8,8 @@ import { bannerAtom } from "~/libs/atom/slideAtom";
 import { DetailDescriptionBlock } from "./DetailDescriptionBlock";
 
 export const TripDetail = () => {
+  const [banner, setBanner] = useAtom(bannerAtom);
+
   const params = useParams();
 
   const tripData = sampleFormData.filter((item) => item.slug === params.slug);
@@ -17,18 +19,31 @@ export const TripDetail = () => {
   const tripOverviewDesc = tripDetailData?.trip_overview.description;
   const activityDesc = tripDetailData?.activity.description;
 
-  const [banner, setBanner] = useAtom(bannerAtom);
+  function timeout(delay: number) {
+    return new Promise((res) => setTimeout(res, delay));
+  }
+
+  const heightBrowser = window.innerHeight;
 
   useEffect(() => {
+    const handleAnimation = async () => {
+      window.scrollTo(0, 0);
+      await timeout(1500);
+      window.scrollTo(0, heightBrowser);
+    };
     setBanner({
       title: tripData[0].description,
       image: tripData[0].image,
     });
+    handleAnimation();
   }, []);
 
   console.log("params", params);
   return (
-    <Box sx={{ backgroundColor: "black", position: "relative", zIndex: 2 }}>
+    <Box
+      id="scroll"
+      sx={{ backgroundColor: "black", position: "relative", zIndex: 2 }}
+    >
       <Container>
         <DetailDescriptionBlock
           title={tripOverviewDesc?.title}
@@ -40,30 +55,43 @@ export const TripDetail = () => {
           content={activityDesc?.content}
           image={activityDesc?.image}
         />
+      </Container>
+      <Box
+        className="outer"
+        sx={{
+          position: "absolute",
+          top: 0,
+          width: "100%",
+          height: "100%",
+          boxSizing: "border-box",
+        }}
+      >
         <Box
-          sx={{ position: "absolute", top: 0, width: "100vw", height: "100%" }}
+          className="layerBox"
+          sx={{
+            position: "sticky",
+            top: 0,
+            height: "100vh",
+            width: "100%",
+            boxSizing: "border-box",
+          }}
         >
           <Box
-            className="layerBox"
-            sx={{ position: "sticky", top: 0, height: "100vh", width: "100vw" }}
+            sx={{
+              position: "absolute",
+              bottom: "2vh",
+              right: "5vw",
+              width: { xs: 300, sm: 400 },
+            }}
           >
-            <Box
-              sx={{
-                position: "absolute",
-                top: "45vh",
-                right: "calc(400px + 2vw)",
-                width: 400,
-              }}
-            >
-              <BaseForm
-                title={formOfTripOverviewData?.title || "Title"}
-                action={formOfTripOverviewData?.action}
-                content={formOfTripOverviewData?.content as any}
-              />
-            </Box>
+            <BaseForm
+              title={formOfTripOverviewData?.title || "Title"}
+              action={formOfTripOverviewData?.action}
+              content={formOfTripOverviewData?.content as any}
+            />
           </Box>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 };

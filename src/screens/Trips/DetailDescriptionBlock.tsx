@@ -16,7 +16,12 @@ export const DetailDescriptionBlock = (props: DetailDescriptionBlockProps) => {
 
   const grid = { xs: 12, sm: 12 };
   return (
-    <Grid container spacing={4} sx={{ marginBottom: 4 }}>
+    <Grid
+      container
+      spacing={4}
+      // px={{ xs: 1, sm: 8 }}
+      sx={{ padingX: 0, paddingTop: { xs: 4, sm: 8 } }}
+    >
       <Grid item {...grid}>
         <Stack spacing={4}>
           <DescriptionTitleText>{title}</DescriptionTitleText>

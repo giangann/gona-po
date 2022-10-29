@@ -2,7 +2,7 @@ import { Box, Button, Stack, styled, Typography } from "@mui/material";
 import { useAtom } from "jotai";
 import { useNavigate } from "react-router";
 import { sampleFormData } from "~/constants/form";
-import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
+import { activeHompageSlideAtom, bannerImageAtom } from "~/libs/atom/slideAtom";
 import { Header } from "~/screens/Header";
 import {
   FormButton,
@@ -16,7 +16,6 @@ export const CustomForm = () => {
   const [index] = useAtom(activeHompageSlideAtom);
   const demoData = sampleFormData[index];
   const navigate = useNavigate();
-
   const handleNavigateTripDetail = () => {
     navigate(`trip/${demoData.slug}`);
   };

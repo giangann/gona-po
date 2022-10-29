@@ -1,11 +1,12 @@
 import { Box, IconButton } from "@mui/material";
+import { useAtom } from "jotai";
 import React, { useEffect } from "react";
 import { IcTwotoneKeyboardArrowDown } from "~/components/Icons";
-import { BANNER_TITLE } from "~/constants/constants";
-import { imageBanner } from "~/constants/images";
+import { bannerAtom } from "~/libs/atom/slideAtom";
 import { BannerTitleText, BoxCenter, BoxLayer } from "~/styles/styled/styled";
 
 export const Banner = () => {
+  const [banner, setBanner] = useAtom(bannerAtom);
   return (
     <Box
       sx={{
@@ -21,7 +22,7 @@ export const Banner = () => {
           objectFit: "cover",
         }}
         component="img"
-        src={imageBanner}
+        src={banner.image}
       />
       <BoxLayer className="layerBox">
         <BannerTitleText
@@ -33,12 +34,12 @@ export const Banner = () => {
             maxWidth: { xs: "80%", sm: "60%" },
           }}
         >
-          {BANNER_TITLE}
+          {banner.title}
         </BannerTitleText>
         <Box
           sx={{
             position: "absolute",
-            bottom: { xs: 50  },
+            bottom: { xs: 50 },
           }}
         >
           <IconButton>

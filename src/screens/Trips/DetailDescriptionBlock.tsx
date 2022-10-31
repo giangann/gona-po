@@ -1,6 +1,5 @@
 import { Box, Grid, Stack } from "@mui/material";
 import {
-  BlogTitleText,
   DescriptionTitleText,
   WhiteTypo,
 } from "~/styles/styled/styled";
@@ -19,7 +18,6 @@ export const DetailDescriptionBlock = (props: DetailDescriptionBlockProps) => {
     <Grid
       container
       spacing={4}
-      // px={{ xs: 1, sm: 8 }}
       sx={{ padingX: 0, paddingTop: { xs: 4, sm: 8 } }}
     >
       <Grid item {...grid}>

@@ -2,7 +2,7 @@ import { Box, Stack } from "@mui/material";
 import { FormButton, ThickTypo, ThinTypo } from "~/styles/styled/styled";
 
 type BaseFormProps = {
-  title: string;
+  title?: string;
   content: { [key: string]: string };
   action?: string;
   onSubmit?: () => void;
@@ -24,25 +24,26 @@ export const BaseForm = (props: BaseFormProps) => {
       }}
       border="2px solid white"
     >
-      <Box
-        p={2}
-        borderBottom="1px solid white"
-        sx={{ display: "flex", justifyContent: "center" }}
-      >
-        <ThickTypo>{title}</ThickTypo>
-      </Box>
-      <Stack spacing={2} p={3}>
-        {keysArr.map((item, index) => (
-          <Stack>
-            <ThinTypo>{item}</ThinTypo>
-            <ThickTypo>{valueArr[index]}</ThickTypo>
-          </Stack>
-        ))}
-
-        {/* <Stack>
-          <ThinTypo>Activities:</ThinTypo>
-          <ThickTypo>{demoData.activity}</ThickTypo>
-        </Stack> */}
+      {title ? (
+        <Box
+          p={{ xs: 2, sm: 2 }}
+          borderBottom="1px solid white"
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
+          <ThickTypo>{title}</ThickTypo>
+        </Box>
+      ) : undefined}
+      <Stack spacing={{ xs: 1, sm: 2 }} p={{ xs: 2, sm: 3 }}>
+        {keysArr.map((item, index) =>
+          item !== "other" ? (
+            <Stack>
+              <ThinTypo>{item}</ThinTypo>
+              <ThickTypo>{valueArr[index]}</ThickTypo>
+            </Stack>
+          ) : (
+            valueArr[index]
+          )
+        )}
       </Stack>
       <Box
         p={2}

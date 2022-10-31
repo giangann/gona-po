@@ -1,12 +1,44 @@
-import { Box, IconButton } from "@mui/material";
+import { Box, Container, IconButton, Stack } from "@mui/material";
 import { useAtom } from "jotai";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import { BaseForm } from "~/components/Form/BaseForm";
 import { IcTwotoneKeyboardArrowDown } from "~/components/Icons";
-import { bannerAtom } from "~/libs/atom/slideAtom";
-import { BannerTitleText, BoxCenter, BoxLayer } from "~/styles/styled/styled";
+import { sampleFormData } from "~/constants/form";
+import { activeHompageSlideAtom, bannerAtom } from "~/libs/atom/slideAtom";
+import {
+  BannerTitleText,
+  BoxCenter,
+  BoxLayer,
+  ThickTypo,
+  WhiteTypo,
+} from "~/styles/styled/styled";
 
 export const Banner = () => {
   const [banner, setBanner] = useAtom(bannerAtom);
+  const [bannerContent, setBannerContent] = useState<{ [key: string]: string }>(
+    {}
+  );
+
+  const [indexOfActiveSlide] = useAtom(activeHompageSlideAtom);
+  const tripInfor = sampleFormData[indexOfActiveSlide];
+  const params = useParams();
+
+  useEffect(() => {
+    if (params.slug) {
+      const tripData = sampleFormData.filter(
+        (item) => item.slug === params.slug
+      )[0];
+      const bannerFormContent = {
+        "Thời gian": tripData.date,
+        "Hoạt động": tripData.activity,
+        other: <ThickTypo>{tripData.price}</ThickTypo>,
+      };
+      setBannerContent(bannerFormContent as any);
+    } else {
+      console.log("not");
+    }
+  }, []);
   return (
     <Box
       sx={{
@@ -22,22 +54,54 @@ export const Banner = () => {
           objectFit: "cover",
         }}
         component="img"
-        src={banner.image}
+        src={params.slug ? tripInfor.image : banner.image}
       />
-      <BoxLayer className="layerBox">
-        <BannerTitleText
+      <BoxLayer
+        sx={{ flexDirection: "column", justifyContent: "space-around" }}
+        className="layerBox"
+      >
+        <Stack alignItems="center" spacing={1}>
+          {params?.slug ? (
+            <BannerTitleText
+              sx={{
+                letterSpacing: 0,
+                fontSize: "28px !important",
+                height: "fit-content",
+                textAlign: "center",
+                top: { xs: "30vh", sm: "40vh" },
+                maxWidth: { xs: "80%", sm: "60%" },
+              }}
+            >
+              {tripInfor.description}
+            </BannerTitleText>
+          ) : (
+            <BannerTitleText
+              sx={{
+                fontSize: "32px !important",
+                height: "fit-content",
+                textAlign: "center",
+                top: { xs: "30vh", sm: "40vh" },
+                maxWidth: { xs: "80%", sm: "60%" },
+              }}
+            >
+              {banner.title}
+            </BannerTitleText>
+          )}
+
+          {params?.slug ? (
+            <>
+              <WhiteTypo>
+                Còn {tripInfor.slots_remain}/{tripInfor.total_slot} slot
+              </WhiteTypo>
+              <Container>
+                <BaseForm content={bannerContent} disableBackground />
+              </Container>
+            </>
+          ) : undefined}
+        </Stack>
+        <BoxCenter
           sx={{
-            height: "fit-content",
-            textAlign: "center",
-            position: "relative",
-            top: { xs: "30vh", sm: "40vh" },
-            maxWidth: { xs: "80%", sm: "60%" },
-          }}
-        >
-          {banner.title}
-        </BannerTitleText>
-        <Box
-          sx={{
+            width: "100%",
             position: "absolute",
             bottom: { xs: 50 },
           }}
@@ -47,7 +111,7 @@ export const Banner = () => {
               <IcTwotoneKeyboardArrowDown fontSize={50} />
             </a>
           </IconButton>
-        </Box>
+        </BoxCenter>
       </BoxLayer>
     </Box>
   );

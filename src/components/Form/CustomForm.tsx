@@ -2,7 +2,7 @@ import { Box, Button, Stack, styled, Typography } from "@mui/material";
 import { useAtom } from "jotai";
 import { useNavigate } from "react-router";
 import { sampleFormData } from "~/constants/form";
-import { activeHompageSlideAtom, bannerImageAtom } from "~/libs/atom/slideAtom";
+import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 import { Header } from "~/screens/Header";
 import {
   FormButton,

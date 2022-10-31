@@ -1,15 +1,11 @@
 import { Box, Container } from "@mui/material";
-import { useAtom } from "jotai";
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
 import { BaseForm } from "~/components/Form/BaseForm";
 import { sampleFormData } from "~/constants/form";
-import { bannerAtom } from "~/libs/atom/slideAtom";
 import { DetailDescriptionBlock } from "./DetailDescriptionBlock";
 
 export const TripDetail = () => {
-  const [banner, setBanner] = useAtom(bannerAtom);
-
   const params = useParams();
 
   const tripData = sampleFormData.filter((item) => item.slug === params.slug);
@@ -31,14 +27,9 @@ export const TripDetail = () => {
       await timeout(1500);
       window.scrollTo(0, heightBrowser);
     };
-    setBanner({
-      title: tripData[0].description,
-      image: tripData[0].image,
-    });
     handleAnimation();
   }, []);
 
-  console.log("params", params);
   return (
     <Box
       id="scroll"

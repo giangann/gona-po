@@ -109,7 +109,7 @@ export const BaseForm = (props: BaseFormProps) => {
           spacing={2}
           alignItems={center ? "center" : "unset"}
           sx={{
-            padding: 1,
+            padding: { xs: 1, sm: 2 },
             overflow: "auto",
             // height: isExpand ? "350px" : "unset",
             height: {
@@ -121,9 +121,7 @@ export const BaseForm = (props: BaseFormProps) => {
           {keysArr.map((item, index) =>
             item !== "other" ? (
               <Stack alignItems={center ? "center" : "unset"} spacing={1}>
-                <ThinTypo
-                  sx={{ color: center ? yellow["text_form"] : "" }}
-                >
+                <ThinTypo sx={{ color: center ? yellow["text_form"] : "" }}>
                   {item}
                 </ThinTypo>
                 <ThickTypo>{valueArr[index]}</ThickTypo>

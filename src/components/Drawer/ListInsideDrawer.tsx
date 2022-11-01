@@ -5,6 +5,7 @@ import { IcTwotoneClose } from "../Icons";
 import { CarouselItem } from "./CarouselItem";
 import { TripInformationCard } from "./TripInformationCard";
 import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 import { useNavigate } from "react-router";
 
 type ListInsideDrawerProps = {
@@ -72,20 +73,20 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
         </Hidden>
 
         {/* For mobile */}
-        {/* <Hidden smUp> */}
-        <Box width="80vw" height="40vw">
-          <AliceCarousel
-            // infinite
-            mouseTracking
-            autoPlayInterval={1000}
-            animationDuration={1500}
-            disableDotsControls
-            controlsStrategy="alternate"
-            responsive={responsive}
-            items={carouselItems}
-          />
-        </Box>
-        {/* </Hidden> */}
+        <Hidden smUp>
+          <Box width="80vw" height="40vw">
+            <AliceCarousel
+              // infinite
+              mouseTracking
+              autoPlayInterval={1000}
+              animationDuration={1500}
+              disableDotsControls
+              controlsStrategy="alternate"
+              responsive={responsive}
+              items={carouselItems}
+            />
+          </Box>
+        </Hidden>
       </Box>
     </Stack>
   );

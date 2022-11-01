@@ -7,6 +7,7 @@ export const red = {
   }
   export const yellow = {
     primary: '#E8BC59',
+    text_form:'#FDDA0D'
   }
   
   export const blue = {

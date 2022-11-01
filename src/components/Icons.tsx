@@ -43,7 +43,7 @@ export function IcTwotoneClose(props: SVGProps<SVGSVGElement>) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}>
       <path
-        fill="currentColor"
+        fill="white"
         d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"
       ></path>
     </svg>
@@ -111,6 +111,25 @@ export function IcTwotoneKeyboardArrowDown(props: SVGProps<SVGSVGElement>) {
       <path
         fill="white"
         d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6l1.41-1.41z"
+      ></path>
+    </svg>
+  );
+}
+
+export function MaterialSymbolsArrowInsert(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}>
+      <path fill="white" d="M17.6 18L8 8.4V17H6V5h12v2H9.4l9.6 9.6Z"></path>
+    </svg>
+  );
+}
+
+export function IcSharpArrowDownward(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="white"
+        d="m20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8l8-8z"
       ></path>
     </svg>
   );

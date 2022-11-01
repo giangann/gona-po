@@ -1,5 +1,6 @@
 import { Box, Container, Grid, IconButton, Stack, styled } from "@mui/material";
 import { CustomizedTextField } from "~/components/CustomInput";
+import { ListInsideDrawer } from "~/components/Drawer/ListInsideDrawer";
 import {
   BrandicoTwitter,
   IcBaselineFacebook,
@@ -22,7 +23,7 @@ export const Footer = () => {
       className="footer"
       sx={{
         // can't understand why need relative :(
-        position:'relative',
+        position: "relative",
         zIndex: 2,
         backgroundColor: "black",
         py: 5,
@@ -101,6 +102,8 @@ export const Footer = () => {
           </Grid>
         </Container>
       </Box>
+
+      <ListInsideDrawer />
     </Box>
   );
 };

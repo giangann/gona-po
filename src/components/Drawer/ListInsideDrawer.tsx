@@ -25,6 +25,8 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
   ));
   const responsive = {
     0: { items: 1 },
+    568: { items: 2 },
+    900: { items: 2 },
   };
 
   return (
@@ -70,24 +72,20 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
         </Hidden>
 
         {/* For mobile */}
-        <Hidden smUp>
-          <Box
-            sx={{ display: "flex", flexDirection: "row" }}
-            width="80vw"
-            height="40vw"
-          >
-            <AliceCarousel
-              // infinite
-              mouseTracking
-              autoPlayInterval={1000}
-              animationDuration={1500}
-              autoPlay
-              controlsStrategy="alternate"
-              responsive={responsive}
-              items={carouselItems}
-            />
-          </Box>
-        </Hidden>
+        {/* <Hidden smUp> */}
+        <Box width="80vw" height="40vw">
+          <AliceCarousel
+            // infinite
+            mouseTracking
+            autoPlayInterval={1000}
+            animationDuration={1500}
+            disableDotsControls
+            controlsStrategy="alternate"
+            responsive={responsive}
+            items={carouselItems}
+          />
+        </Box>
+        {/* </Hidden> */}
       </Box>
     </Stack>
   );

@@ -9,12 +9,12 @@ export const CarouselItem = (
 
   return (
     <Box
-        component="img"
-        src={image}
-        sx={{ width: "300px", height: "300px", objectFit: "cover" }}
-      />
+      component="img"
+      src={image}
+      sx={{ width: "100%", height: "300px", objectFit: "cover" }}
+    />
     // <Stack spacing={2}>
-      
+
     //   <Stack>
     //     <ThickTypo>{title}</ThickTypo>
     //     <ThickTypo>{date}</ThickTypo>

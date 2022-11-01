@@ -10,16 +10,28 @@ export const TripDetail = () => {
 
   const tripData = sampleFormData.filter((item) => item.slug === params.slug);
   const tripDetailData = tripData[0].detail;
-  const formOfTripOverviewData = tripDetailData?.activity.form;
+  const defaultKey = Object.keys(tripDetailData)[0];
+  const [formOfTripOverviewData, setFormOfTripOverviewData] = useState(
+    tripDetailData[defaultKey].form
+  );
+  // const formOfTripOverviewData = tripDetailData?.activity.form;
 
-  const tripOverviewDesc = tripDetailData?.trip_overview.description;
-  const activityDesc = tripDetailData?.activity.description;
+  console.log(Object.keys(tripDetailData));
+  console.log(tripDetailData["activity"]);
 
   function timeout(delay: number) {
     return new Promise((res) => setTimeout(res, delay));
   }
 
   const heightBrowser = window.innerHeight;
+
+  const handleGoBack = () => {
+    console.log("go back");
+  };
+
+  const handleChangeFormData = (key: string) => {
+    setFormOfTripOverviewData(tripDetailData[key].form);
+  };
 
   useEffect(() => {
     const handleAnimation = async () => {
@@ -36,16 +48,16 @@ export const TripDetail = () => {
       sx={{ backgroundColor: "black", position: "relative", zIndex: 2 }}
     >
       <Container>
-        <DetailDescriptionBlock
-          title={tripOverviewDesc?.title}
-          content={tripOverviewDesc?.content}
-          image={tripOverviewDesc?.image}
-        />
-        <DetailDescriptionBlock
-          title={activityDesc?.title}
-          content={activityDesc?.content}
-          image={activityDesc?.image}
-        />
+        {Object.keys(tripDetailData).map((item, index) => (
+          <DetailDescriptionBlock
+            key={index}
+            ref_string={item}
+            title={tripDetailData[item as any]?.description.title}
+            content={tripDetailData[item as any]?.description.content}
+            image={tripDetailData[item as any]?.description.image}
+            handleChangeFormData={handleChangeFormData}
+          />
+        ))}
       </Container>
       <Box
         className="outer"
@@ -72,13 +84,15 @@ export const TripDetail = () => {
               position: "absolute",
               bottom: "2vh",
               right: "5vw",
-              width: { xs: 300, sm: 400 },
             }}
           >
             <BaseForm
               title={formOfTripOverviewData?.title || "Title"}
               action={formOfTripOverviewData?.action}
               content={formOfTripOverviewData?.content as any}
+              fullContent={formOfTripOverviewData?.full_content as any}
+              handleGoBack={handleGoBack}
+              isAcceptExpand={true}
             />
           </Box>
         </Box>

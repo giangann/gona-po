@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { sampleFormData } from "~/constants/form";
 import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 import { Header } from "~/screens/Header";
+import { yellow } from "~/styles/colors";
 import {
   FormButton,
   ThickTypo,
@@ -22,34 +23,36 @@ export const CustomForm = () => {
   return (
     <Stack spacing={2} alignItems="center" sx={{ ...widthStyleResponsive }}>
       <ThickTypo sx={{ textAlign: "center", fontSize: 32 }}>
-        {demoData.description}{" "}
+        {demoData.description.toUpperCase()}{" "}
       </ThickTypo>
       <Box
         sx={{
           width: "100%",
+          borderRadius: 2,
         }}
         border="2px solid white"
       >
-        <Stack spacing={2} p={3}>
-          <ThickTypo>{demoData.title}</ThickTypo>
+        <Stack alignItems="center" spacing={2} p={3}>
+          <ThickTypo sx={{ textAlign: "center" }}>{demoData.title}</ThickTypo>
 
-          <Stack>
-            <ThinTypo>Dates:</ThinTypo>
+          <Stack spacing={1} alignItems="center">
+            <ThinTypo sx={{ color: yellow['text_form'] }}>Thời gian:</ThinTypo>
             <ThickTypo>{demoData.date}</ThickTypo>
           </Stack>
 
-          <Stack>
-            <ThinTypo>Activities:</ThinTypo>
+          <Stack spacing={1} alignItems="center">
+            <ThinTypo sx={{ color: yellow['text_form'] }}>Hoạt động:</ThinTypo>
             <ThickTypo>{demoData.activity}</ThickTypo>
           </Stack>
         </Stack>
         <Box
-          p={2}
-          borderTop="1px solid white"
-          sx={{ display: "flex", justifyContent: "center" }}
+          m={1}
+          p={1}
+          border="1px solid white"
+          sx={{ display: "flex", justifyContent: "center", borderRadius: 2 }}
         >
           <FormButton onClick={handleNavigateTripDetail}>
-            <ThickTypo>Trip details</ThickTypo>
+            <ThickTypo>Chi tiết chuyến đi</ThickTypo>
           </FormButton>
         </Box>
       </Box>

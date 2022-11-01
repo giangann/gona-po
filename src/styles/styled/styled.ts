@@ -45,6 +45,25 @@ export const DescriptionTitleText = styled(Typography)(({ theme }) => ({
   },
 }));
 
+export const PriceBannerText = styled(Typography)(({ theme }) => ({
+  fontWeight: 600,
+  fontSize: 32,
+  color: "white",
+  textTransform: "uppercase",
+  textAlign: "left",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 24,
+  },
+}));
+
+export const priceBannerStyle = {
+  fontWeight: 600,
+  color: "white",
+  textTransform: "uppercase",
+  textAlign: "left",
+  fontSize: { xs: 24, sm: 32 },
+};
+
 export const ThinTypo = styled(Typography)(({ theme }) => ({
   fontWeight: 200,
   opacity: 0.7,
@@ -63,6 +82,13 @@ export const ThickTypo = styled(Typography)(({ theme }) => ({
     fontSize: 14,
   },
 }));
+
+export const thickTypoStyles = {
+  fontWeight: 900,
+  letterSpacing: 3,
+  color: "white",
+  fontSize: { xs: 14, sm: "unset" },
+};
 
 export const FormButton = styled(Button)({
   color: "white",

@@ -1,14 +1,14 @@
 export const sampleFormData = [
   {
-    title: "Explore Hudson Valley",
+    title: "Cùng mình khám phá hòn đảo El Nido Palawan",
     date: "May 1 — May 3, 2020",
     slug: "hudson-valley",
     activity: "Cycling",
-    price: "From $2,800 pp",
+    price: 5999,
     total_slot: 10,
     slots_remain: 4,
     id: 0,
-    description: "MAKE WAVES IN COSTA RICA",
+    description: "Cung đường đến Elnido palawan",
     image:
       "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
     detail: {
@@ -24,6 +24,13 @@ export const sampleFormData = [
         form: {
           title: "Tổng quan chuyến đi",
           content: {
+            "Tổng quan": "Để đến El Nido bạn có thể bay.",
+            "Hoạt động": "Để đến El Nido bạn có thể bay.",
+            "Nơi ở": "Để đến El Nido bạn có thể bay.",
+            "Ẩm thực": "Để đến El Nido bạn có thể bay.",
+            "Điểm đến": "Để đến El Nido bạn có thể bay.",
+          },
+          full_content: {
             "Tổng quan":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
             "Hoạt động":
@@ -53,17 +60,29 @@ export const sampleFormData = [
             "Food tour": "Ăn uống các món ngon tại đây",
             "Tiệc BBQ": "BBQ trước biển vào tối",
           },
+          full_content: {
+            "Tổng quan":
+              "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
+            "Hoạt động":
+              "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
+            "Nơi ở":
+              "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
+            "Ẩm thực":
+              "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
+            "Điểm đến":
+              "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
+          },
           action: "Đăng ký chuyến đi",
         },
       },
     },
   },
   {
-    title: "Explore Costa Rica",
+    title: "Cùng mình chill đảo Mongpong",
     date: "Nov 14 — Nov 19, 2020",
     slug: "costa-rica",
     activity: "Surfing",
-    price: "From $3,450 pp dbl. occ.",
+    price: 4999,
     id: 1,
     total_slot: 9,
     slots_remain: 3,
@@ -82,7 +101,7 @@ export const sampleFormData = [
         },
         form: {
           title: "Tổng quan chuyến đi",
-          content: {
+          full_content: {
             "Tổng quan":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
             "Hoạt động":
@@ -93,6 +112,13 @@ export const sampleFormData = [
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
             "Điểm đến":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
+          },
+          content: {
+            "Tổng quan": "Để đến El Nido bạn có thể bay.",
+            "Hoạt động": "Để đến El Nido bạn có thể bay.",
+            "Nơi ở": "Để đến El Nido bạn có thể bay.",
+            "Ẩm thực": "Để đến El Nido bạn có thể bay.",
+            "Điểm đến": "Để đến El Nido bạn có thể bay.",
           },
           action: "Đăng ký chuyến đi",
         },
@@ -112,19 +138,27 @@ export const sampleFormData = [
             "Food tour": "Ăn uống các món ngon tại đây",
             "Tiệc BBQ": "BBQ trước biển vào tối",
           },
+          full_content: {
+            "Hoạt động vui chơi":
+              "Nhảy đảo, tắm biển, nhảy dù Nhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dù",
+            "Food tour":
+              "Ăn uống các món ngon tại đây Nhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dù",
+            "Tiệc BBQ":
+              "BBQ trước biển vào tối, Nhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dù",
+          },
           action: "Đăng ký chuyến đi",
         },
       },
     },
   },
   {
-    title: "Explore Florence",
+    title: "Cùng mình chill đảo Mongpong",
     date: "Apr 3 — Apr 6, 2022",
     slug: "florence",
     activity: "Running",
     total_slot: 11,
     slots_remain: 5,
-    price: "From $2,350 pp dbl. occ.",
+    price: 3999,
     id: 2,
     description: "THUYỀN ĐẾN ĐẢO MÔNG PONG",
     image:
@@ -141,7 +175,7 @@ export const sampleFormData = [
         },
         form: {
           title: "Tổng quan chuyến đi",
-          content: {
+          full_content: {
             "Tổng quan":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
             "Hoạt động":
@@ -152,6 +186,13 @@ export const sampleFormData = [
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
             "Điểm đến":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
+          },
+          content: {
+            "Tổng quan": "Để đến El Nido bạn có thể bay.",
+            "Hoạt động": "Để đến El Nido bạn có thể bay.",
+            "Nơi ở": "Để đến El Nido bạn có thể bay.",
+            "Ẩm thực": "Để đến El Nido bạn có thể bay.",
+            "Điểm đến": "Để đến El Nido bạn có thể bay.",
           },
           action: "Đăng ký chuyến đi",
         },
@@ -177,13 +218,13 @@ export const sampleFormData = [
     },
   },
   {
-    title: "Explore Morocco",
+    title: "Cùng mình chill đảo Mongpong",
     date: "May 30 — Jun 4, 2020",
     slug: "moroco",
     activity: "Hiking",
     total_slot: 12,
     slots_remain: 6,
-    price: "From $6,250 pp dbl. occ.",
+    price: 2999,
     id: 3,
     description: "GÓC TRỜI TẠI NÚI APO",
     image:
@@ -201,6 +242,13 @@ export const sampleFormData = [
         form: {
           title: "Tổng quan chuyến đi",
           content: {
+            "Tổng quan": "Để đến El Nido bạn có thể bay.",
+            "Hoạt động": "Để đến El Nido bạn có thể bay.",
+            "Nơi ở": "Để đến El Nido bạn có thể bay.",
+            "Ẩm thực": "Để đến El Nido bạn có thể bay.",
+            "Điểm đến": "Để đến El Nido bạn có thể bay.",
+          },
+          full_content: {
             "Tổng quan":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
             "Hoạt động":

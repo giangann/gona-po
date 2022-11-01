@@ -1,4 +1,4 @@
-import { Box, Container, IconButton, Stack } from "@mui/material";
+import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
 import { useAtom } from "jotai";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
@@ -10,7 +10,10 @@ import {
   BannerTitleText,
   BoxCenter,
   BoxLayer,
+  priceBannerStyle,
+  PriceBannerText,
   ThickTypo,
+  thickTypoStyles,
   WhiteTypo,
 } from "~/styles/styled/styled";
 
@@ -19,6 +22,8 @@ export const Banner = () => {
   const [bannerContent, setBannerContent] = useState<{ [key: string]: string }>(
     {}
   );
+
+  console.log("banner content", bannerContent);
 
   const [indexOfActiveSlide] = useAtom(activeHompageSlideAtom);
   const tripInfor = sampleFormData[indexOfActiveSlide];
@@ -32,13 +37,21 @@ export const Banner = () => {
       const bannerFormContent = {
         "Thời gian": tripData.date,
         "Hoạt động": tripData.activity,
-        other: <ThickTypo>{tripData.price}</ThickTypo>,
+        other: (
+          <Typography component="span" sx={{ ...thickTypoStyles }}>
+            Giá:
+            <Typography component="span" sx={{ ...priceBannerStyle }}>
+              {tripData.price}
+            </Typography>
+            /người
+          </Typography>
+        ),
       };
       setBannerContent(bannerFormContent as any);
     } else {
       console.log("not");
     }
-  }, []);
+  }, [params]);
   return (
     <Box
       sx={{
@@ -93,9 +106,7 @@ export const Banner = () => {
               <WhiteTypo>
                 Còn {tripInfor.slots_remain}/{tripInfor.total_slot} slot
               </WhiteTypo>
-              <Container>
-                <BaseForm content={bannerContent} disableBackground />
-              </Container>
+              <BaseForm center content={bannerContent} disableBackground />
             </>
           ) : undefined}
         </Stack>

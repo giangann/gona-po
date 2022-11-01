@@ -17,7 +17,7 @@ export const CustomDrawer: React.FC<PropsType> = ({
     <React.Fragment>
       <Drawer anchor="top" open={open} onClose={handleClose}>
         <Box
-          role="presentation"
+          // role="presentation"
           sx={{
             backgroundColor: backgroundColor["primary"],
             borderBottom: "1px solid white",

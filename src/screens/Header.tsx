@@ -1,13 +1,10 @@
-import {
-  Box,
-  Container,
-  IconButton,
-} from "@mui/material";
+import { Box, Container, IconButton } from "@mui/material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { CustomDrawer } from "~/components/Drawer/CustomDrawer";
 import { ListInsideDrawer } from "~/components/Drawer/ListInsideDrawer";
 import { IcSharpDensityMedium } from "~/components/Icons";
-import { HeaderLogoText } from "~/styles/styled/styled";
+import { CustomLink, HeaderLogoText } from "~/styles/styled/styled";
 
 export const Header = () => {
   const [openHeaderDrawer, setOpenHeaderDrawer] = useState(false);
@@ -15,10 +12,12 @@ export const Header = () => {
     setOpenHeaderDrawer(false);
   };
   return (
-    <Box sx={{ position: "fixed", top: 0, zIndex: 100 }} width="100%">
+    <Box sx={{ position: "fixed", top: 0, zIndex: 3 }} width="100%">
       <Container>
         <Box p={5}>
-          <HeaderLogoText>GonaPo</HeaderLogoText>
+          <CustomLink to="/">
+            <HeaderLogoText>GonaPo</HeaderLogoText>
+          </CustomLink>
         </Box>
       </Container>
       <Box sx={{ position: "absolute", top: "38%", right: "3vw" }}>

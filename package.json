@@ -1,9 +1,12 @@
 {
+  "homepage": "http://giangann.github.io/gona-po",
   "name": "vite-react-ts-eslint-prettier",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "npx eslint src",
@@ -41,6 +44,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.6.2",
     "typescript": "^4.6.3",
     "vite": "^2.9.9",

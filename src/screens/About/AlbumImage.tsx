@@ -55,7 +55,7 @@ export const AlbumImage = () => {
           sx={{ marginTop: "24px   !important" }}
           spacing={{ xs: 2, sm: 3 }}
         >
-          {albumImage.map((item, index) => (
+          {albumImage.map((item) => (
             <Grid item xs={6} sm={4}>
               <Paper
                 elevation={4}

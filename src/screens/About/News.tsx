@@ -14,7 +14,7 @@ export const News = () => {
     <Container>
       <Box sx={{ width: { xs: "100%", sm: "60%" }, margin: "100px auto" }}>
         <Grid container>
-          {newsData.map((item, index) => (
+          {newsData.map((item) => (
             <Grid
               item
               container
@@ -60,7 +60,7 @@ export const News = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  paddingLeft: { xs: 2, md: 4},
+                  paddingLeft: { xs: 2, md: 4 },
                 }}
                 item
                 xs={6}

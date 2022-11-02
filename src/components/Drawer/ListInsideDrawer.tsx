@@ -1,5 +1,5 @@
 import { Box, Button, Hidden, IconButton, Stack } from "@mui/material";
-import { sampleFormData } from "~/constants/form";
+import { allTripsData } from "~/constants/form";
 import { HeaderLogoText, WhiteTypo } from "~/styles/styled/styled";
 import { IcTwotoneClose } from "../Icons";
 import { CarouselItem } from "./CarouselItem";
@@ -16,7 +16,7 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
   const { handleCloseDrawer } = props;
   const navigate = useNavigate();
 
-  const carouselItems = sampleFormData.map((item, index) => (
+  const carouselItems = allTripsData.map((item, index) => (
     <CarouselItem
       image={item.image}
       key={index}
@@ -63,7 +63,7 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
               margin: "30px auto",
             }}
           >
-            {sampleFormData.map((item, index) => (
+            {allTripsData.map((item) => (
               <TripInformationCard
                 title={item.title}
                 date={item.date}

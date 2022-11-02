@@ -1,23 +1,19 @@
 import { Box, Container } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { BaseForm } from "~/components/Form/BaseForm";
-import { sampleFormData } from "~/constants/form";
+import { allTripsData } from "~/constants/form";
 import { DetailDescriptionBlock } from "./DetailDescriptionBlock";
 
 export const TripDetail = () => {
   const params = useParams();
 
-  const tripData = sampleFormData.filter((item) => item.slug === params.slug);
-  const tripDetailData = tripData[0].detail;
-  const defaultKey = Object.keys(tripDetailData)[0];
+  const tripData = allTripsData.filter((item) => item.slug === params.slug);
+  const tripDetailData: { [key: string]: any } = tripData[0].detail;
+  const defaultKey = Object.keys(tripDetailData)[0]; // trip_overview
   const [formOfTripOverviewData, setFormOfTripOverviewData] = useState(
     tripDetailData[defaultKey].form
   );
-  // const formOfTripOverviewData = tripDetailData?.activity.form;
-
-  console.log(Object.keys(tripDetailData));
-  console.log(tripDetailData["activity"]);
 
   function timeout(delay: number) {
     return new Promise((res) => setTimeout(res, delay));

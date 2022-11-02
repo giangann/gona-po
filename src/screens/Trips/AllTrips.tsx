@@ -9,6 +9,7 @@ import { useAtom } from "jotai";
 import { bannerAtom } from "~/libs/atom/slideAtom";
 import { BANNER } from "~/constants/constants";
 export const AllTrips = () => {
+  // @ts-ignore
   const [banner, setBanner] = useAtom(bannerAtom);
 
   useEffect(() => {

@@ -1,24 +1,22 @@
-import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
 import { useAtom } from "jotai";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { BaseForm } from "~/components/Form/BaseForm";
 import { IcTwotoneKeyboardArrowDown } from "~/components/Icons";
-import { sampleFormData } from "~/constants/form";
+import { allTripsData } from "~/constants/form";
 import { activeHompageSlideAtom, bannerAtom } from "~/libs/atom/slideAtom";
 import {
   BannerTitleText,
   BoxCenter,
   BoxLayer,
   priceBannerStyle,
-  PriceBannerText,
-  ThickTypo,
   thickTypoStyles,
   WhiteTypo,
 } from "~/styles/styled/styled";
 
 export const Banner = () => {
-  const [banner, setBanner] = useAtom(bannerAtom);
+  const [banner] = useAtom(bannerAtom);
   const [bannerContent, setBannerContent] = useState<{ [key: string]: string }>(
     {}
   );
@@ -26,12 +24,12 @@ export const Banner = () => {
   console.log("banner content", bannerContent);
 
   const [indexOfActiveSlide] = useAtom(activeHompageSlideAtom);
-  const tripInfor = sampleFormData[indexOfActiveSlide];
+  const tripInfor = allTripsData[indexOfActiveSlide];
   const params = useParams();
 
   useEffect(() => {
     if (params.slug) {
-      const tripData = sampleFormData.filter(
+      const tripData = allTripsData.filter(
         (item) => item.slug === params.slug
       )[0];
       const bannerFormContent = {

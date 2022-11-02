@@ -1,4 +1,4 @@
-export const sampleFormData = [
+export const allTripsData = [
   {
     title: "Cùng mình khám phá hòn đảo El Nido Palawan",
     date: "May 1 — May 3, 2020",
@@ -284,8 +284,6 @@ export const sampleFormData = [
     },
   },
 ];
-
-export const sampleTripDetailData = [];
 
 export const sampleAboutData = {
   header: {

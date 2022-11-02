@@ -17,7 +17,8 @@ export const DetailDescriptionBlock = (props: DetailDescriptionBlockProps) => {
 
   if (blockRefVisible) {
     console.log(ref_string);
-    handleChangeFormData(ref_string);
+    // @ts-ignore
+    handleChangeFormData(ref_string || "default_ref");
   }
 
   const grid = { xs: 12, sm: 12 };

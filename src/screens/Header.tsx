@@ -1,6 +1,5 @@
 import { Box, Container, IconButton } from "@mui/material";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { CustomDrawer } from "~/components/Drawer/CustomDrawer";
 import { ListInsideDrawer } from "~/components/Drawer/ListInsideDrawer";
 import { IcSharpDensityMedium } from "~/components/Icons";

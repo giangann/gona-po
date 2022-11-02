@@ -8,17 +8,23 @@ export const CarouselItem = (
   const { title, date, image } = props;
 
   return (
-    <Box
-      component="img"
-      src={image}
-      sx={{ width: "100%", height: "300px", objectFit: "cover" }}
-    />
-    // <Stack spacing={2}>
+    <Stack spacing={2}>
+      <Box
+        component="img"
+        src={image}
+        sx={{
+          borderRadius: 2,
+          margin: "auto",
+          width: "auto",
+          height: "150px",
+          objectFit: "cover",
+        }}
+      />
 
-    //   <Stack>
-    //     <ThickTypo>{title}</ThickTypo>
-    //     <ThickTypo>{date}</ThickTypo>
-    //   </Stack>
-    // </Stack>
+      <Stack alignItems="center">
+        <ThickTypo sx={{textAlign:'center'}}>{title}</ThickTypo>
+        <ThickTypo>{date}</ThickTypo>
+      </Stack>
+    </Stack>
   );
 };

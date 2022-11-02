@@ -1,6 +1,5 @@
 import { Box, Container, Grid, IconButton, Stack, styled } from "@mui/material";
 import { CustomizedTextField } from "~/components/CustomInput";
-import { ListInsideDrawer } from "~/components/Drawer/ListInsideDrawer";
 import {
   BrandicoTwitter,
   IcBaselineFacebook,
@@ -102,8 +101,6 @@ export const Footer = () => {
           </Grid>
         </Container>
       </Box>
-
-      <ListInsideDrawer />
     </Box>
   );
 };

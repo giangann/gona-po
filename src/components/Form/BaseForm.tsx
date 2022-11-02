@@ -38,7 +38,6 @@ export const BaseForm = (props: BaseFormProps) => {
   const keysArr = Object.keys(formContent);
   const valueArr = Object.values(formContent);
   const [openRegisterForm, setOpenRegisterForm] = useState(false);
-  const heightBrowser = window.innerHeight;
 
   const handleExpand = () => {
     console.log("expand");

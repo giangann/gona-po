@@ -1,5 +1,4 @@
-import { Box, Grid } from "@mui/material";
-import { WhiteOutlinedButton, WhiteTypo } from "~/styles/styled/styled";
+import { Grid } from "@mui/material";
 import { CustomizedTextField } from "../CustomInput";
 
 export const RegisterTrip = () => {

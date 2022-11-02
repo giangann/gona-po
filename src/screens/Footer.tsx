@@ -89,7 +89,7 @@ export const Footer = () => {
             </Grid>
             <Grid item {...grid}>
               <Stack spacing={1}>
-                {MENU_FOOTER.map((item, index) => (
+                {MENU_FOOTER.map((item) => (
                   <CustomLink to={item.link}>
                     <WhiteTypo sx={{ textTransform: "uppercase" }}>
                       {item.title}

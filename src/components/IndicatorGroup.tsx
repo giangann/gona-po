@@ -8,6 +8,7 @@ export const IndicatorGroup = () => {
   const [activeSlide] = useAtom(activeHompageSlideAtom);
   return (
     <Stack spacing={1}>
+      {/* @ts-ignore */}
       {imageSlideHomePage.map((item, index) =>
         index === activeSlide ? (
           <IcRoundCircle color="white" fontSize={12} />

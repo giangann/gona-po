@@ -1,9 +1,8 @@
-import { Box, Button, Stack, styled, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { useAtom } from "jotai";
 import { useNavigate } from "react-router";
-import { sampleFormData } from "~/constants/form";
+import { allTripsData } from "~/constants/form";
 import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
-import { Header } from "~/screens/Header";
 import { yellow } from "~/styles/colors";
 import {
   FormButton,
@@ -11,11 +10,10 @@ import {
   ThinTypo,
   widthStyleResponsive,
 } from "~/styles/styled/styled";
-import { IcRoundCircle, IcOutlineCircle } from "../Icons";
 
 export const CustomForm = () => {
   const [index] = useAtom(activeHompageSlideAtom);
-  const demoData = sampleFormData[index];
+  const demoData = allTripsData[index];
   const navigate = useNavigate();
   const handleNavigateTripDetail = () => {
     navigate(`trip/${demoData.slug}`);
@@ -36,12 +34,12 @@ export const CustomForm = () => {
           <ThickTypo sx={{ textAlign: "center" }}>{demoData.title}</ThickTypo>
 
           <Stack spacing={1} alignItems="center">
-            <ThinTypo sx={{ color: yellow['text_form'] }}>Thời gian:</ThinTypo>
+            <ThinTypo sx={{ color: yellow["text_form"] }}>Thời gian:</ThinTypo>
             <ThickTypo>{demoData.date}</ThickTypo>
           </Stack>
 
           <Stack spacing={1} alignItems="center">
-            <ThinTypo sx={{ color: yellow['text_form'] }}>Hoạt động:</ThinTypo>
+            <ThinTypo sx={{ color: yellow["text_form"] }}>Hoạt động:</ThinTypo>
             <ThickTypo>{demoData.activity}</ThickTypo>
           </Stack>
         </Stack>

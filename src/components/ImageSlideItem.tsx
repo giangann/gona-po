@@ -12,6 +12,7 @@ type ImageSlideItemProps = {
   image: Image;
 };
 export const ImageSlideItem = (props: ImageSlideItemProps) => {
+  // @ts-ignore
   const [indexAtom, setIndexAtom] = useAtom(activeHompageSlideAtom);
 
   const { image } = props;

@@ -42,8 +42,12 @@ export const About = () => {
   }, []);
   return (
     <Box p={1} sx={{ backgroundColor: "black" }}>
-      <AboutHeader tabElement={tabElement} handleToggleTab={handleToggleTab} activeTabId={activeTabId} />
-      {tabElement.map((item: any, index: any) =>
+      <AboutHeader
+        tabElement={tabElement}
+        handleToggleTab={handleToggleTab}
+        activeTabId={activeTabId}
+      />
+      {tabElement.map((item: any) =>
         item.id === activeTabId ? item.element : undefined
       )}
     </Box>

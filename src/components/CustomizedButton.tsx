@@ -1,5 +1,4 @@
 import { Button } from "@mui/material";
-import { borderColor } from "@mui/system";
 import React from "react";
 
 type CustomizedButtonProps = {
@@ -7,7 +6,7 @@ type CustomizedButtonProps = {
   children: React.ReactNode;
 };
 export const CustomizedButton = (props: CustomizedButtonProps) => {
-  const { content, children } = props;
+  const { children } = props;
 
   return (
     <Button

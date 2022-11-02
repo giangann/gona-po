@@ -86,7 +86,7 @@ export const sampleFormData = [
     id: 1,
     total_slot: 9,
     slots_remain: 3,
-    description: "NGẮM BÌNH MINH TRÊN ĐẢO PULAG",
+    description: "Ngắm bình minh trên đảo Pulag",
     image:
       "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
     detail: {
@@ -160,7 +160,7 @@ export const sampleFormData = [
     slots_remain: 5,
     price: 3999,
     id: 2,
-    description: "THUYỀN ĐẾN ĐẢO MÔNG PONG",
+    description: "Thuyền đến đảo MongPong",
     image:
       "https://eqx-assets-prod.imgix.net/images/8d35f14cf20f4f2fa6caa1f5ac562bf5-florence-mid.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
     detail: {
@@ -226,7 +226,7 @@ export const sampleFormData = [
     slots_remain: 6,
     price: 2999,
     id: 3,
-    description: "GÓC TRỜI TẠI NÚI APO",
+    description: "Góc trời tại núi Apo",
     image:
       "https://eqx-assets-prod.imgix.net/images/17f4590aff6d48d5ba275c8e30fa98cb-5732_lr_morocco_hero.png?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
     detail: {

@@ -50,3 +50,15 @@ h3 {
   opacity: 0.3;
   z-index: 999;
 }
+
+.alice-carousel__stage-item{
+  height: fit-content !important;
+}
+
+.alice-carousel__stage{
+  height: fit-content !important;
+}
+
+.alice-carousel__wrapper{
+  height: fit-content !important;
+}

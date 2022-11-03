@@ -16,10 +16,11 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
 
   const { image } = props;
   const { ref: slideRef, inView: slideRefVisible } = useInView();
+  const heightBrowser = window.innerHeight;
 
   if (slideRefVisible) {
-    console.log("image id", image.id);
     setIndexAtom(image.id);
+    window.scrollTo(0, heightBrowser * (image.id + 1));
   }
 
   return (

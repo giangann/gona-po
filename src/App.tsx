@@ -7,6 +7,7 @@ import { AllTrips } from "./screens/Trips/AllTrips";
 import { TripDetail } from "./screens/Trips/TripDetail";
 
 function App() {
+  console.log(import.meta.env.VITE_BASE_URL);
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

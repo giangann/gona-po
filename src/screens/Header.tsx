@@ -13,18 +13,24 @@ export const Header = () => {
   return (
     <Box sx={{ position: "fixed", top: 0, zIndex: 3 }} width="100%">
       <Container>
-        <Box p={5}>
+        <Box p={{ xs: 2, sm: 5 }}>
           <CustomLink to="/">
             <HeaderLogoText>GonaPo</HeaderLogoText>
           </CustomLink>
         </Box>
       </Container>
-      <Box sx={{ position: "absolute", top: "38%", right: "3vw" }}>
+      <Box
+        sx={{
+          position: "absolute",
+          top: { xs: "28%", sm: "38%" },
+          right: "3vw",
+        }}
+      >
         <IconButton
           onClick={() => setOpenHeaderDrawer(true)}
           sx={{ color: "white", p: 0 }}
         >
-          <IcSharpDensityMedium fontSize={30} />
+          <IcSharpDensityMedium fontSize={{ xs: 24, sm: 30 } as any} />
         </IconButton>
       </Box>
 

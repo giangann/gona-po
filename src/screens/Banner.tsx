@@ -21,8 +21,6 @@ export const Banner = () => {
     {}
   );
 
-  console.log("banner content", bannerContent);
-
   const [indexOfActiveSlide] = useAtom(activeHompageSlideAtom);
   const tripInfor = allTripsData[indexOfActiveSlide];
   const params = useParams();

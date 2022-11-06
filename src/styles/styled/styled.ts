@@ -1,7 +1,13 @@
-import { Box, Button, styled, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  stepLabelClasses,
+  styled,
+  Typography,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 
-export const HeaderLogoText = styled(Typography)({
+export const HeaderLogoText = styled(Typography)(({ theme }) => ({
   fontWeight: 500,
   letterSpacing: 1,
   fontSize: 32,
@@ -9,7 +15,11 @@ export const HeaderLogoText = styled(Typography)({
   textAlign: "center",
   fontStyle: "italic",
   color: "white",
-});
+
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 24,
+  },
+}));
 
 export const BannerTitleText = styled(Typography)(({ theme }) => ({
   textTransform: "uppercase",
@@ -80,6 +90,17 @@ export const ThickTypo = styled(Typography)(({ theme }) => ({
   color: "white",
   [theme.breakpoints.down("sm")]: {
     fontSize: 14,
+  },
+}));
+
+export const ImageTitle = styled(Typography)(({ theme }) => ({
+  fontWeight: 900,
+  color: "white",
+  fontSize: 32,
+  textAlign: "left",
+  letterSpacing: 1,
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 18,
   },
 }));
 

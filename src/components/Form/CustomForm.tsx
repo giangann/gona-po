@@ -20,9 +20,18 @@ export const CustomForm = () => {
   };
   return (
     <Stack spacing={2} alignItems="center" sx={{ ...widthStyleResponsive }}>
-      <ThickTypo sx={{ textAlign: "center", fontSize: 32 }}>
-        {demoData.description.toUpperCase()}{" "}
-      </ThickTypo>
+      {/* <Box
+        sx={{
+          width: { xs: 200, sm: 400, md: 300 },
+          position: "absolute",
+          top: "5vh",
+          left: { md: "2vw", sm: "1.5vw", xs: "0.5vw" },
+        }}
+      >
+        <ThickTypo sx={{ textAlign: "center", fontSize: 32 }}>
+          {demoData.description.toUpperCase()}{" "}
+        </ThickTypo>
+      </Box> */}
       <Box
         sx={{
           width: "100%",

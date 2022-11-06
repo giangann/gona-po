@@ -12,7 +12,6 @@ export const AboutHeader = ({
   activeTabId,
 }: any) => {
   const headerData = sampleAboutData.header;
-  console.log("tab Element", tabElement);
   return (
     <Box sx={{ position: "relative", mb: 10 }}>
       <Box

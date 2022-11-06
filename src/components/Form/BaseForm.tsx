@@ -40,7 +40,6 @@ export const BaseForm = (props: BaseFormProps) => {
   const [openRegisterForm, setOpenRegisterForm] = useState(false);
 
   const handleExpand = () => {
-    console.log("expand");
     if (isExpand) {
       setFormContent(content);
       setIsExpand(false);

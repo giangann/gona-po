@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useAtom } from "jotai";
 import { bannerAtom } from "~/libs/atom/slideAtom";
 import { BANNER } from "~/constants/constants";
+import { allTripsData } from "~/constants/form";
 export const AllTrips = () => {
   // @ts-ignore
   const [banner, setBanner] = useAtom(bannerAtom);
@@ -54,8 +55,13 @@ export const AllTrips = () => {
         </Box>{" "}
       </Box>
       <Box id="scroll">
-        {imageSlideHomePage.map((item, index: any) => (
-          <ImageSlideItem key={index} image={item} />
+        {allTripsData.map((item, index: any) => (
+          <ImageSlideItem
+            key={index}
+            image={{ link: item.image, id: item.id }}
+            title={item.description}
+            slot={`Còn ${item.slots_remain}/${item.total_slot} slot`}
+          />
         ))}
       </Box>
     </Box>

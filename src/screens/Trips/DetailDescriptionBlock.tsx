@@ -16,7 +16,6 @@ export const DetailDescriptionBlock = (props: DetailDescriptionBlockProps) => {
   const { ref: blockRef, inView: blockRefVisible } = useInView();
 
   if (blockRefVisible) {
-    console.log(ref_string);
     // @ts-ignore
     handleChangeFormData(ref_string || "default_ref");
   }

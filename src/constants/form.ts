@@ -499,4 +499,35 @@ export const sampleAboutData = {
     ],
   },
 };
+
+export const blogAndTipHomePage = {
+  title: "Blog/Tip du lịch",
+  view_more_text: "Vào xem thêm bài mới nè",
+  blog: [
+    {
+      id: 0,
+      title: "4 cách có những bức ảnh đẹp với núi",
+      tag: "Tip",
+      date: "Ngày 16 tháng 6",
+      view: 193,
+      image:
+        "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+    },
+    {
+      id: 1,
+      title: "4 cách có những bức ảnh đẹp với núi",
+      tag: "Tip",
+      date: "Ngày 16 tháng 6",
+      view: 193,
+      image:
+        "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+    },
+  ],
+};
+
+export const aboutMeHomePage = {
+  title: "Giấc mơ của tôi",
+  content:
+    "Là mọi người đi với tui, đều có cảm giác vui vẻ và có những bức ảnh đẹp. Mọi người đi với tui thấy giải tỏa căng thẳng trong cuộc sống, mọi người đi với tui đến những nơi đẹp đẹp xinh xinh tại các điểm du lịch hấp dẫn ở đất nước nghìn đảo Phillipines, mọi người đi với tui sẽ trải nghiệm nhiều sự kiện hấp dẫn mà tui sẽ tạo ra, mọi người đi với tu sẽ được tận hưởng các món ăn mà chính tui nấu nè. Ý tui nói là vậy á hãy đi với tui 1 lần để thử xem nè! Tui hứa á.",
+};
 export const DEFAULT_INDEX = 0;

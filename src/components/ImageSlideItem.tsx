@@ -48,6 +48,7 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
           width: "100%",
           height: "100%",
           objectFit: "cover",
+          borderRadius:4,
         }}
         component="img"
         src={image.link}

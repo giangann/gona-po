@@ -2,7 +2,7 @@ import { Stack } from "@mui/material";
 import { useAtom } from "jotai";
 import { imageSlideHomePage } from "~/constants/images";
 import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
-import { IcOutlineCircle, IcRoundCircle } from "./Icons";
+import { IcBaselineSquare, IcOutlineCircle, IcOutlineSquare, IcRoundCircle } from "./Icons";
 
 export const IndicatorGroup = () => {
   const [activeSlide] = useAtom(activeHompageSlideAtom);
@@ -11,9 +11,9 @@ export const IndicatorGroup = () => {
       {/* @ts-ignore */}
       {imageSlideHomePage.map((item, index) =>
         index === activeSlide ? (
-          <IcRoundCircle color="white" fontSize={12} />
+          <IcBaselineSquare color="white" fontSize={12} />
         ) : (
-          <IcOutlineCircle color="white" fontSize={12} />
+          <IcOutlineSquare color="white" fontSize={12} />
         )
       )}
     </Stack>

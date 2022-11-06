@@ -35,7 +35,7 @@ export const CustomForm = () => {
       <Box
         sx={{
           width: "100%",
-          borderRadius: 2,
+          borderRadius: 4,
         }}
         border="2px solid white"
       >

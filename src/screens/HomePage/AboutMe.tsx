@@ -6,7 +6,7 @@ export const AboutMe = () => {
   return (
     <Box
       py={4}
-      sx={{ backgroundColor: "black", position: "relative", zIndex: 1 }}
+      sx={{ backgroundColor: "black", position: "relative", zIndex: 2 }}
     >
       <Container>
         <Box mb={{ xs: 2, sm: 3 }}>

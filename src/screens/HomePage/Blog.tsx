@@ -10,7 +10,7 @@ import { BlogCardWithImageAndTitle } from "./BlogCardWithImageAndTitle";
 
 export const Blog = () => {
   return (
-    <Box sx={{ backgroundColor: "black", position: "relative", zIndex: 1 }}>
+    <Box sx={{ backgroundColor: "black", position: "relative", zIndex: 2     }}>
       <Container>
         <ImageTitle>{blogAndTipHomePage.title.toUpperCase()}</ImageTitle>
         <CustomLink to="#">

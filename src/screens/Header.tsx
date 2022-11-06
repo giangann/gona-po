@@ -11,7 +11,7 @@ export const Header = () => {
     setOpenHeaderDrawer(false);
   };
   return (
-    <Box sx={{ position: "fixed", top: 0, zIndex: 3 }} width="100%">
+    <Box sx={{ position: "fixed", top: 0, zIndex: 2 }} width="100%">
       <Container>
         <Box p={{ xs: 2, sm: 5 }}>
           <CustomLink to="/">

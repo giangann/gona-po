@@ -134,3 +134,19 @@ export function IcSharpArrowDownward(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function IcBaselineSquare(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}>
+      <path fill="white" d="M3 3h18v18H3z"></path>
+    </svg>
+  );
+}
+
+export function IcOutlineSquare(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg width="1em" height="1em" viewBox="0 0 24 24" {...props}>
+      <path fill="currentColor" d="M3 3v18h18V3H3zm16 16H5V5h14v14z"></path>
+    </svg>
+  );
+}

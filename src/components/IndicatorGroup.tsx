@@ -2,7 +2,7 @@ import { Stack } from "@mui/material";
 import { useAtom } from "jotai";
 import { imageSlideHomePage } from "~/constants/images";
 import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
-import { IcBaselineSquare, IcOutlineCircle, IcOutlineSquare, IcRoundCircle } from "./Icons";
+import { IcBaselineSquare, IcOutlineSquare } from "./Icons";
 
 export const IndicatorGroup = () => {
   const [activeSlide] = useAtom(activeHompageSlideAtom);

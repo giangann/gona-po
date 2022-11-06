@@ -1,4 +1,4 @@
-import { Box, responsiveFontSizes, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import { useAtom } from "jotai";
 import { useInView } from "react-intersection-observer";
@@ -6,8 +6,6 @@ import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 import {
   fontSizeContentResponsive,
   ImageTitle,
-  ThickTypo,
-  WhiteTypo,
 } from "~/styles/styled/styled";
 
 type Image = {

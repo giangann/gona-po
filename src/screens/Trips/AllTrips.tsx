@@ -1,6 +1,5 @@
 import { Box, Hidden } from "@mui/material";
 import { ImageSlideItem } from "~/components/ImageSlideItem";
-import { imageSlideHomePage } from "~/constants/images";
 import "../../index.css";
 import { CustomForm } from "../../components/Form/CustomForm";
 import { IndicatorGroup } from "~/components/IndicatorGroup";

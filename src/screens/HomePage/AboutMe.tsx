@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { aboutMeHomePage } from "~/constants/form";
 import { ImageTitle, WhiteTypo } from "~/styles/styled/styled";
 

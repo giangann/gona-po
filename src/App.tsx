@@ -4,7 +4,6 @@ import { AlbumImage } from "./screens/About/AlbumImage";
 import { Home } from "./screens/Home";
 import { HomePage } from "./screens/HomePage/HomePage";
 import { Layout } from "./screens/Layout";
-import { AllTrips } from "./screens/Trips/AllTrips";
 import { TripDetail } from "./screens/Trips/TripDetail";
 
 function App() {

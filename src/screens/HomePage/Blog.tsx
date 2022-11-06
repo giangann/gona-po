@@ -18,7 +18,7 @@ export const Blog = () => {
             sx={{ fontWeight: 200, opacity: 0.6, ...fontSizeContentResponsive }}
           >{`${blogAndTipHomePage.view_more_text} >>`}</WhiteTypo>
         </CustomLink>
-        {blogAndTipHomePage.blog.map((item, index) => (
+        {blogAndTipHomePage.blog.map((item) => (
           <BlogCardWithImageAndTitle
             image={item.image}
             title={item.title}

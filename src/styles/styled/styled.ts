@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  stepLabelClasses,
   styled,
   Typography,
 } from "@mui/material";

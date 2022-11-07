@@ -1,11 +1,9 @@
-import { Box, Hidden, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { sampleAboutData } from "~/constants/form";
 import {
   fontSizeContentResponsive,
   WhiteFilledButton,
   WhiteOutlinedButton,
-  BlogTitleText,
-  WhiteTypo,
 } from "~/styles/styled/styled";
 import { Header } from "../Header";
 import { Introduce } from "./Introduce";
@@ -31,17 +29,12 @@ export const AboutHeader = ({
         }}
       />
 
-      {/* Introduce - Desktop*/}
-      {/* <Hidden smDown> */}
-        <Introduce />
-      {/* </Hidden> */}
-
-      {/* Avatar and Tabs */}
+      <Introduce />
       <Box
         sx={{
           position: "absolute",
           bottom: { xs: -30, sm: -120 },
-          left: { xs: 20, sm: 120 },
+          left: { xs: 10, sm: 120 },
         }}
       >
         <Stack direction="row" alignItems="end" spacing={{ xs: 1, sm: 4 }}>
@@ -94,8 +87,6 @@ export const AboutHeader = ({
           </Stack>
         </Stack>
       </Box>
-
-      
     </Box>
   );
 };

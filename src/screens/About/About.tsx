@@ -1,18 +1,9 @@
-import { Box, Hidden } from "@mui/material";
+import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import { DEFAULT_ACTIVE_TAB_ABOUT } from "~/constants/constants";
 import { AboutHeader } from "./AboutHeader";
-import { Introduce } from "./Introduce";
 import { ListAlbumImage } from "./ListAlbumImage";
 import { News } from "./News";
-import {
-  fontSizeContentResponsive,
-  WhiteFilledButton,
-  WhiteOutlinedButton,
-  BlogTitleText,
-  WhiteTypo,
-} from "~/styles/styled/styled";
-import { sampleAboutData } from "~/constants/form";
 
 export const About = () => {
   const tabElement = [
@@ -42,7 +33,6 @@ export const About = () => {
     setActiveTabId(id as number);
     localStorage.setItem("tab-index", id.toString());
   };
-  const headerData = sampleAboutData.header;
 
   useEffect(() => {
     const activeTabId = parseInt(

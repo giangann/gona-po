@@ -15,7 +15,7 @@ export const Introduce = () => {
         position: "absolute",
         top: { xs: "28%", sm: "35%" },
         left: { xs: "10%", sm: "50%" },
-        width: "100%",
+        width: { xs: "80%", sm: "40%" },
       }}
     >
       <Tooltip
@@ -27,7 +27,7 @@ export const Introduce = () => {
       >
         <Box
           sx={{
-            width: { xs: "80%", sm: "30%" },
+            width: "100%",
             height: { xs: 80, sm: "unset" },
             overflow: "hidden",
             whiteSpace: "no-wrap",

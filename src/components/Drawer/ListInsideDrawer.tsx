@@ -7,14 +7,13 @@ import {
 } from "~/styles/styled/styled";
 import { IcTwotoneClose } from "../Icons";
 import { CarouselItem } from "./CarouselItem";
-import { TripInformationCard } from "./TripInformationCard";
 import AliceCarousel from "react-alice-carousel";
 import "../../index.css";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { useNavigate } from "react-router";
 
 type ListInsideDrawerProps = {
-  handleCloseDrawer?: () => void;
+  handleCloseDrawer: () => void;
 };
 export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
   const { handleCloseDrawer } = props;
@@ -26,6 +25,7 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
 
   const carouselItems = allTripsData.map((item, index) => (
     <CarouselItem
+      handleCloseDrawer={handleCloseDrawer}
       slug={item.slug}
       image={item.image}
       key={index}
@@ -77,13 +77,13 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
             <Button onClick={() => navigate("about")}>
               <WhiteTypo>Về mình </WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("contact")}>
+            <Button onClick={() => navigate("about")}>
               <WhiteTypo>Blog</WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("contact")}>
+            <Button onClick={() => navigate("about")}>
               <WhiteTypo>Album</WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("contact")}>
+            <Button onClick={() => navigate("about")}>
               <WhiteTypo>Liên hệ</WhiteTypo>
             </Button>
           </Stack>
@@ -132,13 +132,13 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
             <Button onClick={() => navigate("about")}>
               <WhiteTypo>Về mình </WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("contact")}>
+            <Button onClick={() => navigate("about")}>
               <WhiteTypo>Blog</WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("contact")}>
+            <Button onClick={() => navigate("about")}>
               <WhiteTypo>Album</WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("contact")}>
+            <Button onClick={() => navigate("about")}>
               <WhiteTypo>Liên hệ</WhiteTypo>
             </Button>
           </Stack>

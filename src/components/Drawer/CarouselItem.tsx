@@ -1,11 +1,15 @@
 import { TripInformationCardProps } from "./TripInformationCard";
-import { Box, Stack } from "@mui/material";
+import { Box } from "@mui/material";
 import { CustomLink, ThickTypo } from "~/styles/styled/styled";
 
 export const CarouselItem = (
-  props: TripInformationCardProps & { index: string | number; slug: string }
+  props: TripInformationCardProps & {
+    index: string | number;
+    slug: string;
+    handleCloseDrawer: () => void;
+  }
 ) => {
-  const { title, date, image, slug } = props;
+  const { title, date, image, slug, handleCloseDrawer } = props;
 
   return (
     <Box
@@ -15,7 +19,7 @@ export const CarouselItem = (
         height: "100% !important",
       }}
     >
-      <CustomLink to={`trip/${slug}`}>
+      <CustomLink to={`trip/${slug}`} onClick={handleCloseDrawer}>
         <Box
           sx={{
             width: "100%",

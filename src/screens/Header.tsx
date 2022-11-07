@@ -8,6 +8,7 @@ import { CustomLink, HeaderLogoText } from "~/styles/styled/styled";
 export const Header = () => {
   const [openHeaderDrawer, setOpenHeaderDrawer] = useState(false);
   const handleCloseDrawer = () => {
+    console.log('close drwawer')
     setOpenHeaderDrawer(false);
   };
   return (

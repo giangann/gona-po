@@ -5,7 +5,7 @@ import { useParams } from "react-router";
 import { BaseForm } from "~/components/Form/BaseForm";
 import { IcTwotoneKeyboardArrowDown } from "~/components/Icons";
 import { allTripsData } from "~/constants/form";
-import { activeHompageSlideAtom, bannerAtom } from "~/libs/atom/slideAtom";
+import { bannerAtom } from "~/libs/atom/slideAtom";
 import {
   BannerTitleText,
   BoxCenter,
@@ -20,9 +20,9 @@ export const Banner = () => {
   const [bannerContent, setBannerContent] = useState<{ [key: string]: string }>(
     {}
   );
+  const [tripId, setTripId] = useState(0);
 
-  const [indexOfActiveSlide] = useAtom(activeHompageSlideAtom);
-  const tripInfor = allTripsData[indexOfActiveSlide];
+  const tripInfor = allTripsData[tripId];
   const params = useParams();
 
   useEffect(() => {
@@ -44,6 +44,7 @@ export const Banner = () => {
         ),
       };
       setBannerContent(bannerFormContent as any);
+      setTripId(tripData.id);
     } else {
       console.log("not");
     }

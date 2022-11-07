@@ -1,9 +1,4 @@
-import {
-  Box,
-  Button,
-  styled,
-  Typography,
-} from "@mui/material";
+import { Box, Button, styled, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const HeaderLogoText = styled(Typography)(({ theme }) => ({
@@ -166,6 +161,13 @@ export const BoxCenter = styled(Box)({
   alignItem: "center",
   justifyContent: "center",
 });
+
+export const ToogleLanguageText = styled(Typography)(({ theme }) => ({
+  fontSize: 14,
+  fontWeight: 200,
+  color: "white",
+  opacity: 0.7
+}));
 
 export const widthStyleResponsive = {
   width: {

@@ -19,7 +19,7 @@ export const CustomDrawer: React.FC<PropsType> = ({
         <Box
           // role="presentation"
           sx={{
-            height:'62vh',
+            height: { xs: "62vh", sm: "50vh" },
             backgroundColor: backgroundColor["primary"],
             borderBottom: "1px solid white",
           }}

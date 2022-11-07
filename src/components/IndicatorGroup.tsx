@@ -1,5 +1,6 @@
 import { Stack } from "@mui/material";
 import { useAtom } from "jotai";
+import { allTripsData } from "~/constants/form";
 import { imageSlideHomePage } from "~/constants/images";
 import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 import { IcBaselineSquare, IcOutlineSquare } from "./Icons";
@@ -9,7 +10,7 @@ export const IndicatorGroup = () => {
   return (
     <Stack spacing={1}>
       {/* @ts-ignore */}
-      {imageSlideHomePage.map((item, index) =>
+      {allTripsData.map((item, index) =>
         index === activeSlide ? (
           <IcBaselineSquare color="white" fontSize={12} />
         ) : (

@@ -5,7 +5,7 @@ import { Outlet } from "react-router";
 export const Home = () => {
   return (
     <>
-      <Header />
+      <Header position="fixed" />
       <Banner />
       <Outlet />
     </>

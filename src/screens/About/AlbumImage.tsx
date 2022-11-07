@@ -21,7 +21,7 @@ export const AlbumImage = () => {
     <Box sx={{ backgroundColor: "black" }}>
       {/* Header */}
       <Box sx={{ position: "relative" }}>
-        <Header />
+        <Header position="absolute" />
         <Box
           component="img"
           src={albumImageData.image_thumbnail}

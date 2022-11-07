@@ -367,12 +367,12 @@ export const allTripsData = [
 export const sampleAboutData = {
   header: {
     image:
-      "https://eqx-assets-prod.imgix.net/images/17f4590aff6d48d5ba275c8e30fa98cb-5732_lr_morocco_hero.png?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+      "https://picsum.photos/id/10/1946/800",
     avatar:
       "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
-    hello: "GonaPo xin chào",
+    hello: "GonaPo xin chào!",
     trip_introduce:
-      "El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
+      "El Nido là một điểm đến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm, nhưng cho đến gần đây vẫn còn khá xa lạ đối với khách du lịch nước ngoài. El Nido sở hữu nhưng bãi biển đẹp, làn nước trong vắt, rừng, vách núi đá vôi dựng đứng và những cửa hang hút gió tuyệt đẹp",
   },
   content: {
     introduce: {},

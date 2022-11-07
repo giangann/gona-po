@@ -19,7 +19,7 @@ export const CarouselItem = (
         height: "100% !important",
       }}
     >
-      <CustomLink to={`trip/${slug}`} onClick={handleCloseDrawer}>
+      <CustomLink to={`/trip/${slug}`} onClick={handleCloseDrawer}>
         <Box
           sx={{
             width: "100%",

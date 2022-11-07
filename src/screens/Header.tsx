@@ -5,14 +5,18 @@ import { ListInsideDrawer } from "~/components/Drawer/ListInsideDrawer";
 import { IcSharpDensityMedium } from "~/components/Icons";
 import { CustomLink, HeaderLogoText } from "~/styles/styled/styled";
 
-export const Header = () => {
+type HeaderProps = {
+  position: string;
+};
+export const Header = (props: HeaderProps) => {
+  const { position } = props;
   const [openHeaderDrawer, setOpenHeaderDrawer] = useState(false);
   const handleCloseDrawer = () => {
-    console.log('close drwawer')
+    console.log("close drwawer");
     setOpenHeaderDrawer(false);
   };
   return (
-    <Box sx={{ position: "fixed", top: 0, zIndex: 2 }} width="100%">
+    <Box sx={{ position: { position }, top: 0, zIndex: 3, width: "100%" }}>
       <Container>
         <Box p={{ xs: 2, sm: 5 }}>
           <CustomLink to="/">

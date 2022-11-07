@@ -74,16 +74,16 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
             spacing={4}
             sx={{ mb: 1 }}
           >
-            <Button onClick={() => navigate("about")}>
+            <Button onClick={() => navigate("/about")}>
               <WhiteTypo>Về mình </WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("about")}>
+            <Button onClick={() => navigate("/about")}>
               <WhiteTypo>Blog</WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("about")}>
+            <Button onClick={() => navigate("/about")}>
               <WhiteTypo>Album</WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("about")}>
+            <Button onClick={() => navigate("/about")}>
               <WhiteTypo>Liên hệ</WhiteTypo>
             </Button>
           </Stack>
@@ -129,16 +129,16 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
             spacing={2}
             sx={{ mt: 6 }}
           >
-            <Button onClick={() => navigate("about")}>
+            <Button onClick={() => navigate("/about")}>
               <WhiteTypo>Về mình </WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("about")}>
+            <Button onClick={() => navigate("/about")}>
               <WhiteTypo>Blog</WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("about")}>
+            <Button onClick={() => navigate("/about")}>
               <WhiteTypo>Album</WhiteTypo>
             </Button>
-            <Button onClick={() => navigate("about")}>
+            <Button onClick={() => navigate("/about")}>
               <WhiteTypo>Liên hệ</WhiteTypo>
             </Button>
           </Stack>

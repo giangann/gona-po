@@ -1,7 +1,6 @@
 import { Stack } from "@mui/material";
 import { useAtom } from "jotai";
 import { allTripsData } from "~/constants/form";
-import { imageSlideHomePage } from "~/constants/images";
 import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 import { IcBaselineSquare, IcOutlineSquare } from "./Icons";
 

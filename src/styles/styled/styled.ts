@@ -162,6 +162,7 @@ export const BoxCenter = styled(Box)({
   justifyContent: "center",
 });
 
+// @ts-ignore
 export const ToogleLanguageText = styled(Typography)(({ theme }) => ({
   fontSize: 14,
   fontWeight: 200,

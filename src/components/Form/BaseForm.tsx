@@ -1,5 +1,5 @@
-import { Box, IconButton, Stack } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Box, Grid, IconButton, Stack } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { REGISTER_FORM_TITLE } from "~/constants/constants";
 import { yellow } from "~/styles/colors";
 import { FormButton, ThickTypo, ThinTypo } from "~/styles/styled/styled";
@@ -102,6 +102,44 @@ export const BaseForm = (props: BaseFormProps) => {
       ) : undefined}
       {openRegisterForm ? (
         <RegisterTrip />
+      ) : isExpand ? (
+        <Grid
+          p={{ xs: 2 }}
+          container
+          rowGap={2}
+          sx={{
+            height: { xs: 500, sm: 700 },
+            overflow: "auto",
+          }}
+        >
+          {keysArr.map((item, index) =>
+            item !== "other" ? (
+              <React.Fragment>
+                <Grid
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "start",
+                    paddingX: { xs: 1, sm: 2 },
+                  }}
+                  item
+                  xs={3}
+                >
+                  <ThinTypo sx={{ color: center ? yellow["text_form"] : "" }}>
+                    {item}
+                  </ThinTypo>
+                </Grid>
+                <Grid item xs={9}>
+                  <ThickTypo sx={{ fontSize: 14, letterSpacing: 1 }}>
+                    {valueArr[index]}
+                  </ThickTypo>
+                </Grid>
+              </React.Fragment>
+            ) : (
+              valueArr[index]
+            )
+          )}
+        </Grid>
       ) : (
         <Stack
           spacing={2}
@@ -109,9 +147,8 @@ export const BaseForm = (props: BaseFormProps) => {
           sx={{
             padding: { xs: 1, sm: 2 },
             overflow: "auto",
-            // height: isExpand ? "350px" : "unset",
             height: {
-              xs: isExpand ? 350 : "unset",
+              xs: isExpand ? 350 : 150,
               sm: isExpand ? 650 : "unset",
             },
             maxHeight: {

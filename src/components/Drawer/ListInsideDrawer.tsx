@@ -44,7 +44,7 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
     <Stack>
       <Box sx={{ position: "relative" }}>
         <Box p={2}>
-          <HeaderLogoText sx={{ color: "white" }}>GonaPo</HeaderLogoText>
+          <HeaderLogoText className="header-text" sx={{ color: "white" }}>GonaPo</HeaderLogoText>
         </Box>
         <Stack
           direction="row"

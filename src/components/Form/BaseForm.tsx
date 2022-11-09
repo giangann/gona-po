@@ -62,7 +62,7 @@ export const BaseForm = (props: BaseFormProps) => {
       sx={{
         width: {
           xs: isExpand ? "90vw" : 300,
-          sm: isExpand && !openRegisterForm ? "90vw" : 500,
+          sm: isExpand && !openRegisterForm ? "70vw" : 350,
         },
         backgroundColor: disableBackground ? "none" : "black",
         borderRadius: 4,
@@ -112,7 +112,10 @@ export const BaseForm = (props: BaseFormProps) => {
             // height: isExpand ? "350px" : "unset",
             height: {
               xs: isExpand ? 350 : "unset",
-              sm: isExpand ? 600 : "unset",
+              sm: isExpand ? 650 : "unset",
+            },
+            maxHeight: {
+              sm: isExpand ? "unset" : 250,
             },
           }}
         >
@@ -122,7 +125,9 @@ export const BaseForm = (props: BaseFormProps) => {
                 <ThinTypo sx={{ color: center ? yellow["text_form"] : "" }}>
                   {item}
                 </ThinTypo>
-                <ThickTypo>{valueArr[index]}</ThickTypo>
+                <ThickTypo sx={{ fontSize: 14, letterSpacing: 1 }}>
+                  {valueArr[index]}
+                </ThickTypo>
               </Stack>
             ) : (
               valueArr[index]

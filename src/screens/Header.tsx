@@ -3,7 +3,11 @@ import { useState } from "react";
 import { CustomDrawer } from "~/components/Drawer/CustomDrawer";
 import { ListInsideDrawer } from "~/components/Drawer/ListInsideDrawer";
 import { IcSharpDensityMedium } from "~/components/Icons";
-import { CustomLink, HeaderLogoText } from "~/styles/styled/styled";
+import {
+  CustomLink,
+  HeaderLogoText,
+  ToogleLanguageText,
+} from "~/styles/styled/styled";
 import "../index.css";
 
 type HeaderProps = {
@@ -16,8 +20,12 @@ export const Header = (props: HeaderProps) => {
     console.log("close drwawer");
     setOpenHeaderDrawer(false);
   };
+
+  const handleToogleLanguage = () => {
+    console.log("toogle language");
+  };
   return (
-    <Box sx={{ position: { position }, top: 0, zIndex: 3, width: "100%" }}>
+    <Box sx={{ position: { position }, top: 0, zIndex: 2, width: "100%" }}>
       <Container>
         <Box p={{ xs: 2, sm: 5 }}>
           <CustomLink to="/">
@@ -32,6 +40,12 @@ export const Header = (props: HeaderProps) => {
           right: "3vw",
         }}
       >
+        <IconButton
+          onClick={handleToogleLanguage}
+          sx={{ color: "white", p: 0, mr: 2 }}
+        >
+          <ToogleLanguageText>VI</ToogleLanguageText>
+        </IconButton>
         <IconButton
           onClick={() => setOpenHeaderDrawer(true)}
           sx={{ color: "white", p: 0 }}

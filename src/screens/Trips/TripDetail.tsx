@@ -79,7 +79,7 @@ export const TripDetail = () => {
             sx={{
               position: "absolute",
               bottom: "2vh",
-              right: "5vw",
+              right: "15vw",
             }}
           >
             <BaseForm

@@ -164,7 +164,7 @@ export const BoxCenter = styled(Box)({
 
 // @ts-ignore
 export const ToogleLanguageText = styled(Typography)(({ theme }) => ({
-  fontSize: 14,
+  fontSize: 16,
   fontWeight: 200,
   color: "white",
   opacity: 0.7

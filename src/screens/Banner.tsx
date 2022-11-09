@@ -14,6 +14,7 @@ import {
   thickTypoStyles,
   WhiteTypo,
 } from "~/styles/styled/styled";
+import "../index.css";
 
 export const Banner = () => {
   const [banner] = useAtom(bannerAtom);
@@ -73,6 +74,7 @@ export const Banner = () => {
         <Stack alignItems="center" spacing={1}>
           {params?.slug ? (
             <BannerTitleText
+              className="banner-title"
               sx={{
                 letterSpacing: 0,
                 fontSize: "28px !important",
@@ -86,6 +88,7 @@ export const Banner = () => {
             </BannerTitleText>
           ) : (
             <BannerTitleText
+              className="banner-title"
               sx={{
                 fontSize: "32px !important",
                 height: "fit-content",

@@ -2,16 +2,16 @@ import { Box, Button, styled, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const HeaderLogoText = styled(Typography)(({ theme }) => ({
-  fontWeight: 500,
+  fontWeight: 700,
   letterSpacing: 1,
-  fontSize: 32,
+  fontSize: 48,
   margin: 0,
   textAlign: "center",
-  fontStyle: "italic",
+  // fontStyle: "italic",
   color: "white",
 
   [theme.breakpoints.down("sm")]: {
-    fontSize: 24,
+    fontSize: 30,
   },
 }));
 

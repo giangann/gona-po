@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "FUEurostile";
+  src: local("FUEurostile"), url(./font/SFUEurostileRegular.ttf) format("ttf");
+}
+@font-face {
+  font-family: "BuiltTitlingSb";
+  src: local("BuiltTitlingSb"), url(./font/built_titling_sb.ttf) format("ttf");
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -105,9 +114,14 @@ h3 {
   height: fit-content;
   margin: 0 !important;
 }
-
-@media screen and (max-width: 600px){
-	.alice-carousel__prev-btn {
+.header-text {
+  font-family: "FUEurostile" !important;
+}
+.banner-title {
+  font-family: "BuiltTitlingSb" !important;
+}
+@media screen and (max-width: 600px) {
+  .alice-carousel__prev-btn {
     left: -48px;
   }
   .alice-carousel__next-btn {

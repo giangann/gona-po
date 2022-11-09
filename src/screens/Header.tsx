@@ -4,6 +4,7 @@ import { CustomDrawer } from "~/components/Drawer/CustomDrawer";
 import { ListInsideDrawer } from "~/components/Drawer/ListInsideDrawer";
 import { IcSharpDensityMedium } from "~/components/Icons";
 import { CustomLink, HeaderLogoText } from "~/styles/styled/styled";
+import "../index.css";
 
 type HeaderProps = {
   position: string;
@@ -20,7 +21,7 @@ export const Header = (props: HeaderProps) => {
       <Container>
         <Box p={{ xs: 2, sm: 5 }}>
           <CustomLink to="/">
-            <HeaderLogoText>GonaPo</HeaderLogoText>
+            <HeaderLogoText className="header-text">GonaPo</HeaderLogoText>
           </CustomLink>
         </Box>
       </Container>

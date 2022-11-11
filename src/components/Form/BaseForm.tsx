@@ -1,5 +1,6 @@
+// @ts-nocheck
 import { Box, Grid, IconButton, Stack } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { REGISTER_FORM_TITLE } from "~/constants/constants";
 import { yellow } from "~/styles/colors";
 import { FormButton, ThickTypo, ThinTypo } from "~/styles/styled/styled";
@@ -33,20 +34,23 @@ export const BaseForm = (props: BaseFormProps) => {
     fullContent,
     center = false,
   } = props;
-  const [formContent, setFormContent] = useState(content || fullContent);
   const [isExpand, setIsExpand] = useState(false);
-  const keysArr = Object.keys(formContent);
-  const valueArr = Object.values(formContent);
   const [openRegisterForm, setOpenRegisterForm] = useState(false);
+  const ref = useRef(null);
+  const [outerHeight, setOuterHeight] = useState(200);
 
-  const handleExpand = () => {
-    if (isExpand) {
-      setFormContent(content);
-      setIsExpand(false);
-    } else {
-      setFormContent(fullContent || content);
-      setIsExpand(true);
-    }
+  const keysArr = isExpand
+    ? Object.keys(fullContent as any)
+    : Object.keys(content);
+  const valueArr = isExpand
+    ? Object.values(fullContent as any)
+    : Object.values(content);
+
+  const handleExpand = async () => {
+    setIsExpand(!isExpand);
+    await timeout(15);
+    // @ts-ignore
+    setOuterHeight(ref?.current?.clientHeight | 100);
   };
 
   const handleSubmit = () => {
@@ -54,133 +58,115 @@ export const BaseForm = (props: BaseFormProps) => {
     setOpenRegisterForm(true);
   };
 
+  function timeout(delay: number) {
+    return new Promise((res) => setTimeout(res, delay));
+  }
+
   useEffect(() => {
-    setFormContent(content);
+    // @ts-ignore
+    setOuterHeight(ref?.current?.clientHeight | 100);
   }, [content]);
   return (
     <Box
       sx={{
-        width: {
-          xs: isExpand ? "90vw" : 300,
-          sm: isExpand && !openRegisterForm ? "70vw" : 350,
-        },
         backgroundColor: disableBackground ? "none" : "black",
         borderRadius: 4,
       }}
       border="2px solid white"
     >
-      {title ? (
+      <Box sx={{ height: "fit-content" }}>
+        {title ? (
+          <Box
+            p={{ xs: 2, sm: 2 }}
+            borderBottom="1px solid white"
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <IconButton onClick={handleExpand}>
+              {isAcceptExpand && !openRegisterForm ? (
+                isExpand ? (
+                  <IcSharpArrowDownward fontSize={24} />
+                ) : (
+                  <MaterialSymbolsArrowInsert fontSize={24} />
+                )
+              ) : undefined}
+            </IconButton>
+            <ThickTypo>
+              {openRegisterForm ? REGISTER_FORM_TITLE : title}
+            </ThickTypo>
+            <IconButton onClick={() => setOpenRegisterForm(false)}>
+              {handleGoBack != null ? (
+                openRegisterForm ? (
+                  <IcTwotoneClose />
+                ) : undefined
+              ) : undefined}
+            </IconButton>
+          </Box>
+        ) : undefined}
+        {openRegisterForm ? (
+          <RegisterTrip />
+        ) : (
+          <Box
+            id="box-outer"
+            sx={{
+              width: {
+                xs: isExpand ? "90vw" : 300,
+                sm: isExpand && !openRegisterForm ? "70vw" : 350,
+              },
+              transition: "all 0.6s",
+              height: isExpand
+                ? { xs: 500, sm: 700 }
+                : { xs: 200, sm: outerHeight },
+              overflow: "auto",
+            }}
+          >
+            <Grid id="grid-inner" p={{ xs: 2 }} container rowGap={2} ref={ref}>
+              {keysArr?.map((item, index) =>
+                item !== "other" ? (
+                  <Grid item container spacing={0}>
+                    <Grid
+                      sx={{
+                        display: "flex",
+                        justifyContent: isExpand ? "center" : "start",
+                        alignItems: "start",
+                        paddingX: { xs: 1, sm: isExpand ? 2 : 0 },
+                      }}
+                      item
+                      xs={12}
+                      sm={isExpand ? 3 : 12}
+                    >
+                      <ThinTypo
+                        sx={{ color: center ? yellow["text_form"] : "" }}
+                      >
+                        {item}
+                      </ThinTypo>
+                    </Grid>
+                    <Grid item xs={12} sm={isExpand ? 9 : 12}>
+                      <ThickTypo sx={{ fontSize: 14, letterSpacing: 1 }}>
+                        {valueArr[index]}
+                      </ThickTypo>
+                    </Grid>
+                  </Grid>
+                ) : (
+                  valueArr[index]
+                )
+              )}
+            </Grid>
+          </Box>
+        )}
         <Box
-          p={{ xs: 2, sm: 2 }}
-          borderBottom="1px solid white"
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
+          p={1}
+          m={1}
+          border="1px solid white"
+          sx={{ display: "flex", justifyContent: "center", borderRadius: 2 }}
         >
-          <IconButton onClick={handleExpand}>
-            {isAcceptExpand && !openRegisterForm ? (
-              isExpand ? (
-                <IcSharpArrowDownward fontSize={24} />
-              ) : (
-                <MaterialSymbolsArrowInsert fontSize={24} />
-              )
-            ) : undefined}
-          </IconButton>
-          <ThickTypo>
-            {openRegisterForm ? REGISTER_FORM_TITLE : title}
-          </ThickTypo>
-          <IconButton onClick={() => setOpenRegisterForm(false)}>
-            {handleGoBack != null ? (
-              openRegisterForm ? (
-                <IcTwotoneClose />
-              ) : undefined
-            ) : undefined}
-          </IconButton>
+          <FormButton onClick={onSubmit || handleSubmit}>
+            <ThickTypo>{action || "Submit"}</ThickTypo>
+          </FormButton>
         </Box>
-      ) : undefined}
-      {openRegisterForm ? (
-        <RegisterTrip />
-      ) : isExpand ? (
-        <Grid
-          p={{ xs: 2 }}
-          container
-          rowGap={2}
-          sx={{
-            height: { xs: 500, sm: 700 },
-            overflow: "auto",
-          }}
-        >
-          {keysArr.map((item, index) =>
-            item !== "other" ? (
-              <React.Fragment>
-                <Grid
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "start",
-                    paddingX: { xs: 1, sm: 2 },
-                  }}
-                  item
-                  xs={3}
-                >
-                  <ThinTypo sx={{ color: center ? yellow["text_form"] : "" }}>
-                    {item}
-                  </ThinTypo>
-                </Grid>
-                <Grid item xs={9}>
-                  <ThickTypo sx={{ fontSize: 14, letterSpacing: 1 }}>
-                    {valueArr[index]}
-                  </ThickTypo>
-                </Grid>
-              </React.Fragment>
-            ) : (
-              valueArr[index]
-            )
-          )}
-        </Grid>
-      ) : (
-        <Stack
-          spacing={2}
-          alignItems={center ? "center" : "unset"}
-          sx={{
-            padding: { xs: 1, sm: 2 },
-            overflow: "auto",
-            height: {
-              xs: isExpand ? 350 : 150,
-              sm: isExpand ? 650 : "unset",
-            },
-            maxHeight: {
-              sm: isExpand ? "unset" : 250,
-            },
-          }}
-        >
-          {keysArr.map((item, index) =>
-            item !== "other" ? (
-              <Stack alignItems={center ? "center" : "unset"} spacing={1}>
-                <ThinTypo sx={{ color: center ? yellow["text_form"] : "" }}>
-                  {item}
-                </ThinTypo>
-                <ThickTypo sx={{ fontSize: 14, letterSpacing: 1 }}>
-                  {valueArr[index]}
-                </ThickTypo>
-              </Stack>
-            ) : (
-              valueArr[index]
-            )
-          )}
-        </Stack>
-      )}
-      <Box
-        p={1}
-        m={1}
-        border="1px solid white"
-        sx={{ display: "flex", justifyContent: "center", borderRadius: 2 }}
-      >
-        <FormButton onClick={onSubmit || handleSubmit}>
-          <ThickTypo>{action || "Submit"}</ThickTypo>
-        </FormButton>
       </Box>
     </Box>
   );

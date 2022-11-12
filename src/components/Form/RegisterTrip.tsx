@@ -5,7 +5,7 @@ export const RegisterTrip = () => {
   const gridFull = { xs: 12 };
 
   return (
-    <Grid container spacing={2} p={2}>
+    <Grid container spacing={2} px={2}>
       <Grid item {...gridFull}>
         <CustomizedTextField label="Tên" placeholder="Tên" />
       </Grid>

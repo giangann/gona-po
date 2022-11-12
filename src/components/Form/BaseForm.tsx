@@ -38,6 +38,7 @@ export const BaseForm = (props: BaseFormProps) => {
   const [openRegisterForm, setOpenRegisterForm] = useState(false);
   const ref = useRef(null);
   const [outerHeight, setOuterHeight] = useState(200);
+  const heightBrowser = window.innerHeight;
 
   const keysArr = isExpand
     ? Object.keys(fullContent as any)
@@ -56,6 +57,7 @@ export const BaseForm = (props: BaseFormProps) => {
   const handleSubmit = () => {
     console.log("submit");
     setOpenRegisterForm(true);
+    setOuterHeight(ref.current.clientHeight);
   };
 
   function timeout(delay: number) {
@@ -63,9 +65,13 @@ export const BaseForm = (props: BaseFormProps) => {
   }
 
   useEffect(() => {
-    // @ts-ignore
-    setOuterHeight(ref?.current?.clientHeight | 100);
-  }, [content]);
+    if (ref?.current?.clientHeight < 0.7 * heightBrowser) {
+      // @ts-ignore
+      setOuterHeight(ref?.current?.clientHeight | 100);
+    } else {
+      setOuterHeight(heightBrowser * 0.7);
+    }
+  }, [content, openRegisterForm]);
   return (
     <Box
       sx={{
@@ -106,57 +112,60 @@ export const BaseForm = (props: BaseFormProps) => {
             </IconButton>
           </Box>
         ) : undefined}
-        {openRegisterForm ? (
-          <RegisterTrip />
-        ) : (
-          <Box
-            id="box-outer"
-            sx={{
-              width: {
-                xs: isExpand ? "90vw" : 300,
-                sm: isExpand && !openRegisterForm ? "70vw" : 350,
-              },
-              transition: "all 0.6s",
-              height: isExpand
-                ? { xs: 500, sm: 700 }
-                : { xs: 200, sm: outerHeight },
-              overflow: "auto",
-            }}
-          >
-            <Grid id="grid-inner" p={{ xs: 2 }} container rowGap={2} ref={ref}>
-              {keysArr?.map((item, index) =>
-                item !== "other" ? (
-                  <Grid item container spacing={0}>
-                    <Grid
-                      sx={{
-                        display: "flex",
-                        justifyContent: isExpand ? "center" : "start",
-                        alignItems: "start",
-                        paddingX: { xs: 1, sm: isExpand ? 2 : 0 },
-                      }}
-                      item
-                      xs={12}
-                      sm={isExpand ? 3 : 12}
-                    >
-                      <ThinTypo
-                        sx={{ color: center ? yellow["text_form"] : "" }}
+
+        <Box
+          id="box-outer"
+          sx={{
+            width: {
+              xs: isExpand ? "90vw" : 300,
+              sm: isExpand && !openRegisterForm ? "70vw" : 300,
+            },
+            transition: "all 0.6s",
+            height: isExpand
+              ? { xs: 500, sm: 700 }
+              : { xs: outerHeight, sm: outerHeight },
+            overflow: "auto",
+          }}
+        >
+          <Grid id="grid-inner" p={{ xs: 2 }} container rowGap={2} ref={ref}>
+            {openRegisterForm ? (
+              <RegisterTrip />
+            ) : (
+              <>
+                {keysArr?.map((item, index) =>
+                  item !== "other" ? (
+                    <Grid item container spacing={0}>
+                      <Grid
+                        sx={{
+                          display: "flex",
+                          justifyContent: isExpand ? "center" : "start",
+                          alignItems: "start",
+                          paddingX: { xs: 1, sm: isExpand ? 2 : 0 },
+                        }}
+                        item
+                        xs={12}
+                        sm={isExpand ? 3 : 12}
                       >
-                        {item}
-                      </ThinTypo>
+                        <ThinTypo
+                          sx={{ color: center ? yellow["text_form"] : "" }}
+                        >
+                          {item}
+                        </ThinTypo>
+                      </Grid>
+                      <Grid item xs={12} sm={isExpand ? 9 : 12}>
+                        <ThickTypo sx={{ fontSize: 14, letterSpacing: 1 }}>
+                          {valueArr[index]}
+                        </ThickTypo>
+                      </Grid>
                     </Grid>
-                    <Grid item xs={12} sm={isExpand ? 9 : 12}>
-                      <ThickTypo sx={{ fontSize: 14, letterSpacing: 1 }}>
-                        {valueArr[index]}
-                      </ThickTypo>
-                    </Grid>
-                  </Grid>
-                ) : (
-                  valueArr[index]
-                )
-              )}
-            </Grid>
-          </Box>
-        )}
+                  ) : (
+                    valueArr[index]
+                  )
+                )}
+              </>
+            )}
+          </Grid>
+        </Box>
         <Box
           p={1}
           m={1}

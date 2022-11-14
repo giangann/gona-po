@@ -31,9 +31,9 @@ export const TripDetail = () => {
 
   useEffect(() => {
     const handleAnimation = async () => {
-      window.scrollTo(0, 0);
-      await timeout(1500);
-      window.scrollTo(0, heightBrowser);
+      window.scrollTo({ top: 0, behavior: "auto" });
+      await timeout(1000);
+      window.scrollTo({ top: heightBrowser, behavior: "smooth" });
     };
     handleAnimation();
   }, []);

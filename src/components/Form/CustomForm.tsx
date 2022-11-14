@@ -2,6 +2,8 @@ import { Box, Stack } from "@mui/material";
 import { useAtom } from "jotai";
 import { useNavigate } from "react-router";
 import { allTripsData } from "~/constants/form";
+import { timeout } from "~/constants/function";
+import { animationAtom, imageTopLayerAtom } from "~/libs/atom/animateAtom";
 import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 import { yellow } from "~/styles/colors";
 import {
@@ -13,10 +15,25 @@ import {
 
 export const CustomForm = () => {
   const [index] = useAtom(activeHompageSlideAtom);
+  const [animateAtom, setAnimateAtom] = useAtom(animationAtom);
+  const [imageTopLayer, setImageTopLayer] = useAtom(imageTopLayerAtom);
   const demoData = allTripsData[index];
   const navigate = useNavigate();
-  const handleNavigateTripDetail = () => {
+  const handleNavigateTripDetail = async () => {
+    setAnimateAtom(false);
+    await timeout(2000);
+    setImageTopLayer({
+      ...imageTopLayer,
+      display: true,
+    });
+
     navigate(`trip/${demoData.slug}`);
+    await timeout(1000);
+
+    setImageTopLayer({
+      ...imageTopLayer,
+      display: false,
+    });
   };
   return (
     <Stack spacing={2} alignItems="center" sx={{ ...widthStyleResponsive }}>

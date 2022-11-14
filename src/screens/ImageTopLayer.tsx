@@ -58,6 +58,17 @@ export const ImageTopLayer = () => {
         component="img"
         src={banner.image}
       />
+      <Box
+        className="black-layer"
+        sx={{
+          position: "absolute",
+          top: 0,
+          height: "100vh",
+          width: "100vw",
+          backgroundColor: "black",
+          opacity: 0.3,
+        }}
+      />
       <BoxLayer
         sx={{ flexDirection: "column", justifyContent: "space-around" }}
         className="layerBox"
@@ -80,7 +91,11 @@ export const ImageTopLayer = () => {
           <WhiteTypo>
             Còn {tripData.slots_remain}/{tripData.total_slot} slot
           </WhiteTypo>
-          <BaseForm center content={bannerFormContent as any} disableBackground />
+          <BaseForm
+            center
+            content={bannerFormContent as any}
+            disableBackground
+          />
         </Stack>
         <BoxCenter
           sx={{

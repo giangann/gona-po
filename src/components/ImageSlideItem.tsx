@@ -72,11 +72,11 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
         <Box
           id="image-slide"
           sx={{
-            width: animateAtom ? "98%" : "100%",
-            height: animateAtom ? "95%" : "100%",
+            width: { xs: "100%", sm: animateAtom ? "98%" : "100%" },
+            height: { xs: "100%", sm: animateAtom ? "95%" : "100%" },
             transition: "all 0.6s",
             objectFit: "cover",
-            borderRadius: animateAtom ? 4 : 0,
+            borderRadius: { xs: 0, sm: animateAtom ? 4 : 0 },
           }}
           component="img"
           src={image.link}

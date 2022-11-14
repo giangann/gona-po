@@ -23,7 +23,7 @@ type ImageSlideItemProps = {
 export const ImageSlideItem = (props: ImageSlideItemProps) => {
   // @ts-ignore
   const [indexAtom, setIndexAtom] = useAtom(activeHompageSlideAtom);
-  const [animateAtom, setAnimateAtom] = useAtom(animationAtom);
+  const [animateAtom] = useAtom(animationAtom);
   const { image, title, slot } = props;
   const { ref: slideRef, inView: slideRefVisible } = useInView();
   const heightBrowser = window.innerHeight;

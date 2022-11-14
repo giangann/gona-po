@@ -12,6 +12,7 @@ import { animationAtom } from "~/libs/atom/animateAtom";
 export const AllTrips = () => {
   // @ts-ignore
   const [banner, setBanner] = useAtom(bannerAtom);
+  // @ts-ignore
   const [animateAtom, setAnimateAtom] = useAtom(animationAtom);
 
   useEffect(() => {

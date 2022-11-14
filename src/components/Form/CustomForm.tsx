@@ -15,6 +15,7 @@ import {
 
 export const CustomForm = () => {
   const [index] = useAtom(activeHompageSlideAtom);
+  // @ts-ignore
   const [animateAtom, setAnimateAtom] = useAtom(animationAtom);
   const [imageTopLayer, setImageTopLayer] = useAtom(imageTopLayerAtom);
   const demoData = allTripsData[index];

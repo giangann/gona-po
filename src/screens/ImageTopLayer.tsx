@@ -16,7 +16,7 @@ import {
 
 export const ImageTopLayer = () => {
   const [imageLayer] = useAtom(imageTopLayerAtom);
-  const [indexAtom, setIndexAtom] = useAtom(activeHompageSlideAtom);
+  const [indexAtom] = useAtom(activeHompageSlideAtom);
 
   const tripData = allTripsData[indexAtom];
 

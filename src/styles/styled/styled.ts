@@ -98,6 +98,13 @@ export const ImageTitle = styled(Typography)(({ theme }) => ({
   },
 }));
 
+export const MobileInfoTitleBottomDrawer = styled(Typography)({
+  fontSize: 16,
+  color: "white",
+  textDecoration: "underline",
+  letterSpacing: 2
+});
+
 export const thickTypoStyles = {
   fontWeight: 900,
   letterSpacing: 3,
@@ -167,7 +174,7 @@ export const ToogleLanguageText = styled(Typography)(({ theme }) => ({
   fontSize: 16,
   fontWeight: 200,
   color: "white",
-  opacity: 0.7
+  opacity: 0.7,
 }));
 
 export const widthStyleResponsive = {

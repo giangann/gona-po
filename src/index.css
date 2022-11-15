@@ -131,7 +131,28 @@ h3 {
 
 /* scroll custom */
 
-#box-outer::-webkit-scrollbar {
+.box-outer::-webkit-scrollbar {
   width: 4px;
   background-color: #f5f5f5;
+}
+
+/* sticky trigger */
+.isSticky {
+  background-color: white;
+}
+/* smart sticky header */
+.bottom-header {
+  position: sticky;
+  top: -1px;
+  font-size: 3em;
+  transition: 0.2s ease-out;
+}
+
+.isSticky::after {
+  content: " is sticky";
+  color: salmon;
+}
+
+section {
+  height: 20vh;
 }

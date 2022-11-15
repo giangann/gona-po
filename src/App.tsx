@@ -7,6 +7,7 @@ import { Layout } from "./screens/Layout";
 import { TripDetail } from "./screens/Trips/TripDetail";
 import { AnimatePresence } from "framer-motion";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { TestStickyHeader } from "./screens/TestStickyHeader";
 
 function App() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
+        <Route path="/sticky" element={<TestStickyHeader />} />
           <Route path="/" element={<Layout />}>
             <Route path="/about" element={<About />} />
             <Route path="/about/album/:id" element={<AlbumImage />} />

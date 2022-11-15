@@ -30,7 +30,7 @@ export const Introduce = () => {
             width: "100%",
             height: { xs: 80, sm: "unset" },
             overflow: "hidden",
-            whiteSpace: "no-wrap",
+            whiteSpace: { xs: "nowrap", md: "unset" },
             textOverflow: "ellipsis",
           }}
         >
@@ -47,7 +47,7 @@ export const Introduce = () => {
             sx={{
               ...fontSizeContentResponsive,
               overflow: "hidden",
-              whiteSpace: "no-wrap",
+              // whiteSpace: "nowrap",
               textOverflow: "ellipsis",
             }}
           >

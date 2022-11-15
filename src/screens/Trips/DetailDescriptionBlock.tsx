@@ -25,7 +25,7 @@ export const DetailDescriptionBlock = (props: DetailDescriptionBlockProps) => {
     <Grid
       container
       spacing={4}
-      sx={{ padingX: 0, paddingTop: { xs: 4, sm: 8 }, minHeight: "100vh" }}
+      sx={{ padingX: 0, paddingTop: { xs: 4, sm: 8 }, minHeight: "115vh" }}
     >
       <Grid item {...grid}>
         <Stack spacing={4}>
@@ -33,7 +33,13 @@ export const DetailDescriptionBlock = (props: DetailDescriptionBlockProps) => {
           <WhiteTypo>{content}</WhiteTypo>
         </Stack>
       </Grid>
-      <Grid item {...grid} ref={blockRef} />
+      <Grid
+        className="ref-grid"
+        item
+        {...grid}
+        ref={blockRef}
+        sx={{ padding: '0px !important' }}
+      />
       <Grid item {...grid}>
         <Box
           component="img"

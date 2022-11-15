@@ -8,12 +8,16 @@ import { useAtom } from "jotai";
 import { bannerAtom } from "~/libs/atom/slideAtom";
 import { BANNER } from "~/constants/constants";
 import { allTripsData } from "~/constants/form";
+import { animationAtom } from "~/libs/atom/animateAtom";
 export const AllTrips = () => {
   // @ts-ignore
   const [banner, setBanner] = useAtom(bannerAtom);
+  // @ts-ignore
+  const [animateAtom, setAnimateAtom] = useAtom(animationAtom);
 
   useEffect(() => {
     setBanner(BANNER);
+    setAnimateAtom(true)
   }, []);
   return (
     <Box sx={{ position: "relative", zIndex: 2 }}>

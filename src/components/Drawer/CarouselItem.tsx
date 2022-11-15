@@ -34,7 +34,7 @@ export const CarouselItem = (
             sx={{
               borderRadius: 2,
               margin: "12px auto",
-              width: "auto",
+              width: "100%",
               height: "150px",
               objectFit: "cover",
             }}

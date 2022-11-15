@@ -67,6 +67,17 @@ export const Banner = () => {
         component="img"
         src={params.slug ? tripInfor.image : banner.image}
       />
+      <Box
+        className="black-layer"
+        sx={{
+          position: "absolute",
+          top: 0,
+          height: "100vh",
+          width: "100vw",
+          backgroundColor: "black",
+          opacity: 0.3,
+        }}
+      />
       <BoxLayer
         sx={{ flexDirection: "column", justifyContent: "space-around" }}
         className="layerBox"

@@ -67,7 +67,7 @@ export const BaseForm = (props: BaseFormProps) => {
   useEffect(() => {
     if (ref?.current?.clientHeight < 0.7 * heightBrowser) {
       // @ts-ignore
-      setOuterHeight(ref?.current?.clientHeight | 100);
+      setOuterHeight(ref?.current?.clientHeight );
     } else {
       setOuterHeight(heightBrowser * 0.7);
     }
@@ -114,7 +114,7 @@ export const BaseForm = (props: BaseFormProps) => {
         ) : undefined}
 
         <Box
-          id="box-outer"
+          className="box-outer"
           sx={{
             width: {
               xs: isExpand ? "90vw" : 300,

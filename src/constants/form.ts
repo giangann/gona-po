@@ -23,6 +23,8 @@ export const allTripsData = [
         },
         form: {
           title: "Tổng quan chuyến đi",
+          short_info:
+            "Để đến El Nido bạn có thể dùng nhiều loại phương tiện khác nhau",
           content: {
             "Tổng quan": "Để đến El Nido bạn có thể bay.",
             "Hoạt động": "Để đến El Nido bạn có thể bay.",
@@ -55,6 +57,7 @@ export const allTripsData = [
         },
         form: {
           title: "Hoạt động",
+          short_info: "Nhảy đảo, tắm biển, nhảy dù",
           content: {
             "Hoạt động vui chơi": "Nhảy đảo, tắm biển, nhảy dù",
             "Food tour": "Ăn uống các món ngon tại đây",
@@ -102,6 +105,8 @@ export const allTripsData = [
         },
         form: {
           title: "Tổng quan chuyến đi",
+          short_info:
+            "Để đến El Nido bạn có thể dùng nhiều loại phương tiện khác nhau",
           full_content: {
             "Tổng quan":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
@@ -127,6 +132,7 @@ export const allTripsData = [
       activity: {
         description: {
           title: "Nhảy các đảo đẹp được đánh giá cao của cộng đồng quốc tế",
+          short_info: "Nhảy đảo, tắm biển, nhảy dù",
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
           image:
@@ -169,6 +175,7 @@ export const allTripsData = [
         description: {
           title:
             "Nhiều hòn đảo nhỏ được gắn kết gần nhau tạo nên một EL Nido, Palawan",
+
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
           image:
@@ -176,6 +183,8 @@ export const allTripsData = [
         },
         form: {
           title: "Tổng quan chuyến đi",
+          short_info:
+            "Để đến El Nido bạn có thể dùng nhiều loại phương tiện khác nhau",
           full_content: {
             "Tổng quan":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
@@ -208,6 +217,7 @@ export const allTripsData = [
         },
         form: {
           title: "Hoạt động",
+          short_info: "Nhảy đảo, tắm biển, nhảy dù",
           content: {
             "Hoạt động vui chơi": "Nhảy đảo, tắm biển, nhảy dù",
             "Food tour": "Ăn uống các món ngon tại đây",
@@ -242,6 +252,8 @@ export const allTripsData = [
         },
         form: {
           title: "Tổng quan chuyến đi",
+          short_info:
+            "Để đến El Nido bạn có thể dùng nhiều loại phương tiện khác nhau",
           content: {
             "Tổng quan": "Để đến El Nido bạn có thể bay.",
             "Hoạt động": "Để đến El Nido bạn có thể bay.",
@@ -274,6 +286,7 @@ export const allTripsData = [
         },
         form: {
           title: "Hoạt động",
+          short_info: "Nhảy đảo, tắm biển, nhảy dù",
           content: {
             "Hoạt động vui chơi": "Nhảy đảo, tắm biển, nhảy dù",
             "Food tour": "Ăn uống các món ngon tại đây",
@@ -308,6 +321,8 @@ export const allTripsData = [
         },
         form: {
           title: "Tổng quan chuyến đi",
+          short_info:
+            "Để đến El Nido bạn có thể dùng nhiều loại phương tiện khác nhau",
           content: {
             "Tổng quan": "Để đến El Nido bạn có thể bay.",
             "Hoạt động": "Để đến El Nido bạn có thể bay.",
@@ -340,6 +355,7 @@ export const allTripsData = [
         },
         form: {
           title: "Hoạt động",
+          short_info: "Nhảy đảo, tắm biển, nhảy dù",
           content: {
             "Hoạt động vui chơi": "Nhảy đảo, tắm biển, nhảy dù",
             "Food tour": "Ăn uống các món ngon tại đây",
@@ -366,8 +382,7 @@ export const allTripsData = [
 
 export const sampleAboutData = {
   header: {
-    image:
-      "https://picsum.photos/id/10/1946/800",
+    image: "https://picsum.photos/id/10/1946/800",
     avatar:
       "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
     hello: "GonaPo xin chào!",

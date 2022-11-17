@@ -1,5 +1,12 @@
-import { Box, Container, IconButton } from "@mui/material";
-import { useState } from "react";
+import {
+  Box,
+  Container,
+  IconButton,
+  MenuItem,
+  MenuList,
+  Popover,
+} from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { CustomDrawer } from "~/components/Drawer/CustomDrawer";
 import { ListInsideDrawer } from "~/components/Drawer/ListInsideDrawer";
 import { IcSharpDensityMedium } from "~/components/Icons";
@@ -9,6 +16,7 @@ import {
   ToogleLanguageText,
 } from "~/styles/styled/styled";
 import "../index.css";
+import { useTranslation } from "react-i18next";
 
 type HeaderProps = {
   position: string;
@@ -16,14 +24,63 @@ type HeaderProps = {
 export const Header = (props: HeaderProps) => {
   const { position } = props;
   const [openHeaderDrawer, setOpenHeaderDrawer] = useState(false);
+  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
+    null
+  );
+  const [language, setLanguages] = useState();
+  const { i18n } = useTranslation();
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+
+  const LANGUAGES = [
+    {
+      name: "Tiếng Việt",
+      symbol: "vi",
+    },
+    {
+      name: "English",
+      symbol: "en",
+    },
+  ];
+
   const handleCloseDrawer = () => {
-    console.log("close drwawer");
     setOpenHeaderDrawer(false);
   };
 
-  const handleToogleLanguage = () => {
-    console.log("toogle language");
+  const handleToogleLanguage = (index: number) => {
+    const chosenLanguage = LANGUAGES[index];
+
+    localStorage.setItem("language", chosenLanguage.symbol);
+    i18n.changeLanguage(chosenLanguage.symbol);
+    setLang();
+
+    handleClose();
   };
+
+  const setLang = async () => {
+    const symbol = await localStorage.getItem("language");
+    if (symbol) {
+      const l = LANGUAGES.find((i) => i.symbol === symbol);
+      //@ts-ignore
+      setLanguages(l?.symbol);
+    } else {
+      //@ts-ignore
+      setLanguages("English");
+    }
+  };
+  useEffect(() => {
+    setLang();
+  }, []);
+
   return (
     <Box sx={{ position: { position }, top: 0, zIndex: 2, width: "100%" }}>
       <Container>
@@ -40,12 +97,34 @@ export const Header = (props: HeaderProps) => {
           right: "3vw",
         }}
       >
-        <IconButton
-          onClick={handleToogleLanguage}
-          sx={{ color: "white", p: 0, mr: 2 }}
-        >
-          <ToogleLanguageText>VI</ToogleLanguageText>
-        </IconButton>
+        <>
+          <IconButton onClick={handleClick} sx={{ color: "white", p: 2 }}>
+            {/* @ts-ignore */}
+            <ToogleLanguageText>{language?.toUpperCase()}</ToogleLanguageText>
+          </IconButton>
+          <Popover
+            id={id}
+            open={open}
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
+            }}
+          >
+            <MenuList>
+              {LANGUAGES.map((item, index) => (
+                <MenuItem
+                  key={index}
+                  onClick={() => handleToogleLanguage(index)}
+                >
+                  {item.symbol.toUpperCase()}
+                </MenuItem>
+              ))}
+            </MenuList>
+          </Popover>
+        </>
+
         <IconButton
           onClick={() => setOpenHeaderDrawer(true)}
           sx={{ color: "white", p: 0 }}

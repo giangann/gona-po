@@ -10,7 +10,7 @@ import { BlogCardWithImageAndTitle } from "./BlogCardWithImageAndTitle";
 
 export const Blog = () => {
   return (
-    <Box sx={{ backgroundColor: "black", position: "relative", zIndex: 2     }}>
+    <Box sx={{ backgroundColor: "black", position: "relative", zIndex: 2 }}>
       <Container>
         <ImageTitle>{blogAndTipHomePage.title.toUpperCase()}</ImageTitle>
         <CustomLink to="#">
@@ -18,14 +18,16 @@ export const Blog = () => {
             sx={{ fontWeight: 200, opacity: 0.6, ...fontSizeContentResponsive }}
           >{`${blogAndTipHomePage.view_more_text} >>`}</WhiteTypo>
         </CustomLink>
-        {blogAndTipHomePage.blog.map((item) => (
-          <BlogCardWithImageAndTitle
-            image={item.image}
-            title={item.title}
-            tag={item.tag}
-            date={item.date}
-            view={item.view}
-          />
+        {blogAndTipHomePage.blog.map((item, index) => (
+          <CustomLink to={`/blog/${index}`}>
+            <BlogCardWithImageAndTitle
+              image={item.image}
+              title={item.title}
+              tag={item.tag}
+              date={item.date}
+              view={item.view}
+            />
+          </CustomLink>
         ))}
       </Container>
     </Box>

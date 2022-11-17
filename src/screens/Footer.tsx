@@ -13,10 +13,13 @@ import {
   WhiteOutlinedButton,
   WhiteTypo,
 } from "~/styles/styled/styled";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
   const gridFull = { xs: 12 };
   const grid = { xs: 12, sm: 4 };
+
+  const { t } = useTranslation();
   return (
     <Box
       className="footer"
@@ -37,18 +40,18 @@ export const Footer = () => {
           <Grid container py={4} spacing={4}>
             <Grid item {...grid} container rowSpacing={2}>
               <Grid item {...gridFull}>
-                <ThickTypo>Đăng kí để nhận tour mới nhất</ThickTypo>
+                <ThickTypo>{t("home.form.form_title_footer")}</ThickTypo>
               </Grid>
               <Grid item {...gridFull}>
                 <CustomizedTextField
-                  label="Tên của bạn"
-                  placeholder="Tên của bạn"
+                  label={t("home.form.your_name")}
+                  placeholder={t("home.form.your_name")}
                 />
               </Grid>
               <Grid item {...gridFull}>
                 <CustomizedTextField
-                  label="Địa chỉ email"
-                  placeholder="Địa chỉ email"
+                  label={t("home.form.email")}
+                  placeholder={t("home.form.email")}
                 />
               </Grid>
               <Grid item {...gridFull}>
@@ -57,7 +60,7 @@ export const Footer = () => {
                   fullWidth
                   variant="outlined"
                 >
-                  <WhiteTypo>Đăng ký</WhiteTypo>
+                  <WhiteTypo>{t("home.form.register")}</WhiteTypo>
                 </WhiteOutlinedButton>
               </Grid>
             </Grid>
@@ -70,7 +73,7 @@ export const Footer = () => {
               }}
             >
               <Stack spacing={1}>
-                <ThickTypo>Theo dõi tại</ThickTypo>
+                <ThickTypo>{t('footer.follow_us')}</ThickTypo>
                 <Stack spacing={1} direction="row">
                   <CustomIconButton>
                     <IcBaselineFacebook fontSize={30} />

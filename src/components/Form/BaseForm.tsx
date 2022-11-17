@@ -1,4 +1,5 @@
 // @ts-nocheck
+import { useTranslation } from "react-i18next";
 import { Box, Grid, IconButton, Stack } from "@mui/material";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { REGISTER_FORM_TITLE } from "~/constants/constants";
@@ -39,6 +40,7 @@ export const BaseForm = (props: BaseFormProps) => {
   const ref = useRef(null);
   const [outerHeight, setOuterHeight] = useState(200);
   const heightBrowser = window.innerHeight;
+  const { t } = useTranslation();
 
   const keysArr = isExpand
     ? Object.keys(fullContent as any)
@@ -67,7 +69,7 @@ export const BaseForm = (props: BaseFormProps) => {
   useEffect(() => {
     if (ref?.current?.clientHeight < 0.7 * heightBrowser) {
       // @ts-ignore
-      setOuterHeight(ref?.current?.clientHeight );
+      setOuterHeight(ref?.current?.clientHeight);
     } else {
       setOuterHeight(heightBrowser * 0.7);
     }
@@ -173,7 +175,7 @@ export const BaseForm = (props: BaseFormProps) => {
           sx={{ display: "flex", justifyContent: "center", borderRadius: 2 }}
         >
           <FormButton onClick={onSubmit || handleSubmit}>
-            <ThickTypo>{action || "Submit"}</ThickTypo>
+            <ThickTypo>{action || t("submit")}</ThickTypo>
           </FormButton>
         </Box>
       </Box>

@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import { BaseForm } from "~/components/Form/BaseForm";
 import { IcTwotoneKeyboardArrowDown } from "~/components/Icons";
 import { allTripsData } from "~/constants/form";
+import { useTranslation } from "react-i18next";
 import { bannerAtom } from "~/libs/atom/slideAtom";
 import {
   BannerTitleText,
@@ -21,10 +22,15 @@ export const Banner = () => {
   const [bannerContent, setBannerContent] = useState<{ [key: string]: string }>(
     {}
   );
+  const { t } = useTranslation();
   const [tripId, setTripId] = useState(0);
-
   const tripInfor = allTripsData[tripId];
   const params = useParams();
+
+  const formTitle = {
+    time: t("time"),
+    activity: t("activity"),
+  };
 
   useEffect(() => {
     if (params.slug) {
@@ -32,15 +38,15 @@ export const Banner = () => {
         (item) => item.slug === params.slug
       )[0];
       const bannerFormContent = {
-        "Thời gian": tripData.date,
-        "Hoạt động": tripData.activity,
+        [formTitle.time]: tripData.date,
+        [formTitle.activity]: tripData.activity,
         other: (
           <Typography component="span" sx={{ ...thickTypoStyles }}>
-            Giá:
+            {t("price")}:
             <Typography component="span" sx={{ ...priceBannerStyle }}>
               {tripData.price}
             </Typography>
-            /người
+            /{t("person")}
           </Typography>
         ),
       };

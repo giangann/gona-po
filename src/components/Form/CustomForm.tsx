@@ -6,6 +6,7 @@ import { timeout } from "~/constants/function";
 import { animationAtom, imageTopLayerAtom } from "~/libs/atom/animateAtom";
 import { activeHompageSlideAtom } from "~/libs/atom/slideAtom";
 import { yellow } from "~/styles/colors";
+import { useTranslation } from "react-i18next";
 import {
   FormButton,
   ThickTypo,
@@ -20,6 +21,7 @@ export const CustomForm = () => {
   const [imageTopLayer, setImageTopLayer] = useAtom(imageTopLayerAtom);
   const demoData = allTripsData[index];
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const handleNavigateTripDetail = async () => {
     setAnimateAtom(false);
     await timeout(2000);
@@ -61,12 +63,16 @@ export const CustomForm = () => {
           <ThickTypo sx={{ textAlign: "center" }}>{demoData.title}</ThickTypo>
 
           <Stack spacing={1} alignItems="center">
-            <ThinTypo sx={{ color: yellow["text_form"] }}>Thời gian:</ThinTypo>
+            <ThinTypo sx={{ color: yellow["text_form"] }}>
+              {t("time")}:
+            </ThinTypo>
             <ThickTypo>{demoData.date}</ThickTypo>
           </Stack>
 
           <Stack spacing={1} alignItems="center">
-            <ThinTypo sx={{ color: yellow["text_form"] }}>Hoạt động:</ThinTypo>
+            <ThinTypo sx={{ color: yellow["text_form"] }}>
+              {t("activity")}:
+            </ThinTypo>
             <ThickTypo>{demoData.activity}</ThickTypo>
           </Stack>
         </Stack>
@@ -77,7 +83,7 @@ export const CustomForm = () => {
           sx={{ display: "flex", justifyContent: "center", borderRadius: 2 }}
         >
           <FormButton onClick={handleNavigateTripDetail}>
-            <ThickTypo>Chi tiết chuyến đi</ThickTypo>
+            <ThickTypo>{t('home.trip_detail')}</ThickTypo>
           </FormButton>
         </Box>
       </Box>

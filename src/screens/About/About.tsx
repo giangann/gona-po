@@ -6,24 +6,27 @@ import { ListAlbumImage } from "./ListAlbumImage";
 import { News } from "./News";
 import { motion } from "framer-motion";
 import "../../index.css";
+import { AboutMe } from "./AboutMe";
+import { useTranslation } from "react-i18next";
 
 export const About = () => {
+  const { t } = useTranslation();
   const tabElement = [
     {
       id: 0,
-      title: "Giới thiệu",
-      element: <></>,
+      title: t("about.introduce"),
+      element: <AboutMe />,
       isActive: false,
     },
     {
       id: 1,
-      title: "Bản tin",
+      title: t("about.news"),
       element: <News />,
       isActive: true,
     },
     {
       id: 2,
-      title: "Album ảnh",
+      title: t("about.album_image"),
       element: <ListAlbumImage />,
       isActive: false,
     },

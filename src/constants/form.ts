@@ -1,3 +1,5 @@
+import i18n from "~/libs/atom/lang/translations/i18n";
+
 export const allTripsData = [
   {
     title: "Cùng mình khám phá hòn đảo El Nido Palawan",
@@ -44,7 +46,7 @@ export const allTripsData = [
             "Điểm đến":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
           },
-          action: "Đăng ký chuyến đi",
+          action: i18n.t("form.register_trip"),
         },
       },
       activity: {
@@ -75,7 +77,7 @@ export const allTripsData = [
             "Điểm đến":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
           },
-          action: "Đăng ký chuyến đi",
+          action: i18n.t("form.register_trip"),
         },
       },
     },
@@ -126,7 +128,7 @@ export const allTripsData = [
             "Ẩm thực": "Để đến El Nido bạn có thể bay.",
             "Điểm đến": "Để đến El Nido bạn có thể bay.",
           },
-          action: "Đăng ký chuyến đi",
+          action: i18n.t("form.register_trip"),
         },
       },
       activity: {
@@ -153,7 +155,7 @@ export const allTripsData = [
             "Tiệc BBQ":
               "BBQ trước biển vào tối, Nhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dùNhảy đảo, tắm biển, nhảy dù",
           },
-          action: "Đăng ký chuyến đi",
+          action: i18n.t("form.register_trip"),
         },
       },
     },
@@ -204,7 +206,7 @@ export const allTripsData = [
             "Ẩm thực": "Để đến El Nido bạn có thể bay.",
             "Điểm đến": "Để đến El Nido bạn có thể bay.",
           },
-          action: "Đăng ký chuyến đi",
+          action: i18n.t("form.register_trip"),
         },
       },
       activity: {
@@ -223,7 +225,7 @@ export const allTripsData = [
             "Food tour": "Ăn uống các món ngon tại đây",
             "Tiệc BBQ": "BBQ trước biển vào tối",
           },
-          action: "Đăng ký chuyến đi",
+          action: i18n.t("form.register_trip"),
         },
       },
     },
@@ -273,7 +275,7 @@ export const allTripsData = [
             "Điểm đến":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
           },
-          action: "Đăng ký chuyến đi",
+          action: i18n.t("form.register_trip"),
         },
       },
       activity: {
@@ -292,7 +294,7 @@ export const allTripsData = [
             "Food tour": "Ăn uống các món ngon tại đây",
             "Tiệc BBQ": "BBQ trước biển vào tối",
           },
-          action: "Đăng ký chuyến đi",
+          action: i18n.t("form.register_trip"),
         },
       },
     },
@@ -342,7 +344,7 @@ export const allTripsData = [
             "Điểm đến":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
           },
-          action: "Đăng ký chuyến đi",
+          action: i18n.t("form.register_trip"),
         },
       },
       activity: {
@@ -373,7 +375,7 @@ export const allTripsData = [
             "Điểm đến":
               "Để đến El Nido bạn có thể bay từ Manila đến sân bay El Nido, tuy nhiên các chuyến bay thẳng đến đây thường đắt. Để tiết kiệm chi phí, các bạn nên bay từ Manila đến Puerto Princessa (thành phố của Palawan), sau đó đi xe bus (Cherry bus)/mini van (Lexus) về bến xe Corong Corong cách thị trấn El Nido khoảng 1,5 cây số – thời gian di chuyển khoảng 5 – 6 giờ. Giá vé xe Lexus là 500 peso, các chuyến xe liên tục cách nhau 1 giờ.",
           },
-          action: "Đăng ký chuyến đi",
+          action: i18n.t("form.register_trip"),
         },
       },
     },
@@ -390,7 +392,13 @@ export const sampleAboutData = {
       "El Nido là một điểm đến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm, nhưng cho đến gần đây vẫn còn khá xa lạ đối với khách du lịch nước ngoài. El Nido sở hữu nhưng bãi biển đẹp, làn nước trong vắt, rừng, vách núi đá vôi dựng đứng và những cửa hang hút gió tuyệt đẹp",
   },
   content: {
-    introduce: {},
+    introduce: {
+      title: "GonaPo LÀ GÌ?",
+      content:
+        "El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa Đừng tưởng Philippines không có gì chơi khi Boracay đóng cửa nhé. Những vùng biển xanh ngọc ở El Nido hứa hẹn sẽ làm tan chảy nhiều trái tim Du lịch El Nido là một lựa chọn hàng đầu của Phuotvivu tại Philippines. Thị trấn ven biển cực Bắc vùng Palawan nên nằm trong danh sách các địa điểm du lịch ...",
+      image:
+        "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+    },
     news: [
       {
         avatar:

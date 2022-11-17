@@ -1,15 +1,20 @@
 import { Box, Container, Grid, Stack, styled, Typography } from "@mui/material";
 import { sampleAboutData } from "~/constants/form";
+import { useTranslation } from "react-i18next";
 
 export const News = () => {
+  const { t } = useTranslation();
+
   const newsData = sampleAboutData.content.news;
   const emotionStatus = (emotion: string, location: string) => {
     return (
       <NewsDate>
-        Cảm thấy <b>{emotion.toLowerCase()}</b> tại <b>{location}</b>
+        {t("about.feel")} <b>{emotion.toLowerCase()}</b> {t("about.in")}{" "}
+        <b>{location}</b>
       </NewsDate>
     );
   };
+
   return (
     <Container>
       <Box sx={{ width: { xs: "100%", sm: "60%" }, margin: "100px auto" }}>

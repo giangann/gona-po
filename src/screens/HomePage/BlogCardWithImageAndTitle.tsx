@@ -14,7 +14,7 @@ type BlogCardWithImageAndTitleProps = {
 export const BlogCardWithImageAndTitle = (
   props: BlogCardWithImageAndTitleProps
 ) => {
-  const { image, title, tag, date, view } = props;
+  const { image, name, tag, created_at, view } = props;
   return (
     <Container
       sx={{
@@ -53,7 +53,7 @@ export const BlogCardWithImageAndTitle = (
             color: "black",
           }}
         >
-          {title.toUpperCase()}
+          {name}
         </BlogTitleText>
         <Stack
           direction="row"
@@ -62,7 +62,7 @@ export const BlogCardWithImageAndTitle = (
           mt={2}
         >
           <Typography component="span" sx={{ color: "black", opacity: 0.7 }}>
-            {date}
+            {created_at}
           </Typography>
           <Typography
             component="span"

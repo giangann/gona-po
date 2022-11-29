@@ -9,6 +9,7 @@ import {
 import { BlogCardWithImageAndTitle } from "./BlogCardWithImageAndTitle";
 
 export const Blog = () => {
+  // @ts-ignore
   return (
     <Box sx={{ backgroundColor: "black", position: "relative", zIndex: 2 }}>
       <Container>
@@ -22,9 +23,9 @@ export const Blog = () => {
           <CustomLink to={`/blog/${index}`}>
             <BlogCardWithImageAndTitle
               image={item.image}
-              title={item.title}
+              name={item.name}
               tag={item.tag}
-              date={item.date}
+              created_at={item.created_at}
               view={item.view}
             />
           </CustomLink>

@@ -1,5 +1,5 @@
 import i18n from "~/libs/atom/lang/translations/i18n";
-
+import axios from 'axios';
 export const allTripsData = [
   {
     title: "Cùng mình khám phá hòn đảo El Nido Palawan",
@@ -601,30 +601,21 @@ export const sampleAboutData = {
     ],
   },
 };
+const  blogData = [];
+axios.get(`https://tourapi.nguyenngoctuan07.com/api/v1/posts`)
+    .then(res =>{
+        for(let i = 0; i <res.data.data.length; i++){
+        //  console.log("608",res.data.data[i]); return;
+          blogData.push({name:res.data.data[i].name,created_at:res.data.data[i].created_at,image:res.data.data[i].image,tag:"Tip",view:193})
+        }
+        return blogData;
 
+    })
+console.log("614",blogData)
 export const blogAndTipHomePage = {
   title: "Blog/Tip du lịch",
   view_more_text: "Vào xem thêm bài mới nè",
-  blog: [
-    {
-      id: 0,
-      title: "4 cách có những bức ảnh đẹp với núi",
-      tag: "Tip",
-      date: "Ngày 16 tháng 6",
-      view: 193,
-      image:
-        "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
-    },
-    {
-      id: 1,
-      title: "4 cách có những bức ảnh đẹp với núi",
-      tag: "Tip",
-      date: "Ngày 16 tháng 6",
-      view: 193,
-      image:
-        "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
-    },
-  ],
+  blog:blogData,
 };
 
 export const aboutMeHomePage = {

@@ -11,8 +11,7 @@ export const allTripsData = [
     slots_remain: 4,
     id: 0,
     description: "Cung đường đến Elnido palawan",
-    image:
-      "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+    image: "https://picsum.photos/id/204/1946/720.webp",
     detail: {
       trip_overview: {
         description: {
@@ -20,8 +19,7 @@ export const allTripsData = [
             "Nhiều hòn đảo nhỏ được gắn kết gần nhau tạo nên một EL Nido, Palawan",
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
-          image:
-            "https://eqx-assets-prod.imgix.net/images/17f4590aff6d48d5ba275c8e30fa98cb-5732_lr_morocco_hero.png?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          image: "https://picsum.photos/id/206/1980/1200.webp",
         },
         form: {
           title: "Tổng quan chuyến đi",
@@ -54,8 +52,7 @@ export const allTripsData = [
           title: "Nhảy các đảo đẹp được đánh giá cao của cộng đồng quốc tế",
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
-          image:
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          image: "https://picsum.photos/id/208/1980/1200.webp",
         },
         form: {
           title: "Hoạt động",
@@ -94,7 +91,7 @@ export const allTripsData = [
     slots_remain: 3,
     description: "Ngắm bình minh trên đảo Pulag",
     image:
-      "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+      "https://picsum.photos/id/210/1946/720.webp",
     detail: {
       trip_overview: {
         description: {
@@ -103,7 +100,7 @@ export const allTripsData = [
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
           image:
-            "https://eqx-assets-prod.imgix.net/images/17f4590aff6d48d5ba275c8e30fa98cb-5732_lr_morocco_hero.png?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+            "https://picsum.photos/id/213/1980/1200.webp",
         },
         form: {
           title: "Tổng quan chuyến đi",
@@ -138,7 +135,7 @@ export const allTripsData = [
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
           image:
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+            "https://picsum.photos/id/212/1980/1200.webp",
         },
         form: {
           title: "Hoạt động",
@@ -171,7 +168,7 @@ export const allTripsData = [
     id: 2,
     description: "Thuyền đến đảo MongPong",
     image:
-      "https://eqx-assets-prod.imgix.net/images/8d35f14cf20f4f2fa6caa1f5ac562bf5-florence-mid.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+      "https://picsum.photos/id/215/1980/1200.webp",
     detail: {
       trip_overview: {
         description: {
@@ -181,7 +178,7 @@ export const allTripsData = [
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
           image:
-            "https://eqx-assets-prod.imgix.net/images/17f4590aff6d48d5ba275c8e30fa98cb-5732_lr_morocco_hero.png?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+            "https://picsum.photos/id/216/1980/1200.webp",
         },
         form: {
           title: "Tổng quan chuyến đi",
@@ -215,7 +212,7 @@ export const allTripsData = [
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
           image:
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+            "https://picsum.photos/id/217/1980/1200.webp",
         },
         form: {
           title: "Hoạt động",
@@ -241,7 +238,7 @@ export const allTripsData = [
     id: 3,
     description: "Góc trời tại núi Apo",
     image:
-      "https://eqx-assets-prod.imgix.net/images/17f4590aff6d48d5ba275c8e30fa98cb-5732_lr_morocco_hero.png?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+      "https://picsum.photos/id/220/1946/720.webp",
     detail: {
       trip_overview: {
         description: {
@@ -250,7 +247,7 @@ export const allTripsData = [
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
           image:
-            "https://eqx-assets-prod.imgix.net/images/17f4590aff6d48d5ba275c8e30fa98cb-5732_lr_morocco_hero.png?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+            "https://picsum.photos/id/221/1980/1200.webp",
         },
         form: {
           title: "Tổng quan chuyến đi",
@@ -284,7 +281,7 @@ export const allTripsData = [
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
           image:
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+            "https://picsum.photos/id/222/1980/1200.webp",
         },
         form: {
           title: "Hoạt động",
@@ -310,7 +307,7 @@ export const allTripsData = [
     id: 4,
     description: "Cung đường đến Elnido palawan",
     image:
-      "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+      "https://picsum.photos/id/225/1946/720.webp",
     detail: {
       trip_overview: {
         description: {
@@ -319,7 +316,7 @@ export const allTripsData = [
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
           image:
-            "https://eqx-assets-prod.imgix.net/images/17f4590aff6d48d5ba275c8e30fa98cb-5732_lr_morocco_hero.png?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+            "https://picsum.photos/id/226/1980/1200.webp",
         },
         form: {
           title: "Tổng quan chuyến đi",
@@ -353,7 +350,7 @@ export const allTripsData = [
           content:
             "Elnido là một điểm dến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm.El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa",
           image:
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+            "https://picsum.photos/id/227/1980/1200.webp",
         },
         form: {
           title: "Hoạt động",
@@ -386,7 +383,7 @@ export const sampleAboutData = {
   header: {
     image: "https://picsum.photos/id/10/1946/800",
     avatar:
-      "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+      "https://picsum.photos/id/10/1946/800",
     hello: "GonaPo xin chào!",
     trip_introduce:
       "El Nido là một điểm đến phổ biến cho người dân địa phương trong những ngày nghỉ dài trong năm, nhưng cho đến gần đây vẫn còn khá xa lạ đối với khách du lịch nước ngoài. El Nido sở hữu nhưng bãi biển đẹp, làn nước trong vắt, rừng, vách núi đá vôi dựng đứng và những cửa hang hút gió tuyệt đẹp",
@@ -397,14 +394,14 @@ export const sampleAboutData = {
       content:
         "El Nido là một đô thị hạng 1 và là một khu vực được bảo vệ tài nguyên ở tỉnh Palawan của Philippines. Đô thị này toạ lạc khoảng 420 km về phía tây nam Manila, và khoảng 238 km về phía tây bắc của Puerto Princesa Đừng tưởng Philippines không có gì chơi khi Boracay đóng cửa nhé. Những vùng biển xanh ngọc ở El Nido hứa hẹn sẽ làm tan chảy nhiều trái tim Du lịch El Nido là một lựa chọn hàng đầu của Phuotvivu tại Philippines. Thị trấn ven biển cực Bắc vùng Palawan nên nằm trong danh sách các địa điểm du lịch ...",
       image:
-        "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        "https://picsum.photos/id/10/1946/800",
     },
     news: [
       {
         avatar:
-          "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/10/1946/800",
         image:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         website: "GonaPo.com",
         trip_duration: "14 ngày",
         date: "13 tháng 9 năm 2007",
@@ -415,9 +412,9 @@ export const sampleAboutData = {
       },
       {
         avatar:
-          "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/10/1946/800",
         image:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         website: "GonaPo.com",
         trip_duration: "14 ngày",
         date: "13 tháng 9 năm 2007",
@@ -428,9 +425,9 @@ export const sampleAboutData = {
       },
       {
         avatar:
-          "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/10/1946/800",
         image:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         website: "GonaPo.com",
         trip_duration: "14 ngày",
         date: "13 tháng 9 năm 2007",
@@ -441,9 +438,9 @@ export const sampleAboutData = {
       },
       {
         avatar:
-          "https://eqx-assets-prod.imgix.net/images/ca7c4f87aef6432f9f902af5a921ef64-costa-rica-hero-image.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/10/1946/800",
         image:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         website: "GonaPo.com",
         trip_duration: "14 ngày",
         date: "13 tháng 9 năm 2007",
@@ -456,146 +453,146 @@ export const sampleAboutData = {
     album_image: [
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
       {
         image_thumbnail:
-          "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+          "https://picsum.photos/id/11/1980/1720",
         title: "Ngắm bình minh núi Pulag",
         date: "Ngày 22 tháng 9 năm 2022",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum! Provident similique accusantium nemo autem.",
         list_image: Array.from(Array(10).keys()).map(
           () =>
-            "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946"
+            "https://picsum.photos/id/11/1980/1720"
         ),
       },
     ],

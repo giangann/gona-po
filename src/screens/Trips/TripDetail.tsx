@@ -23,7 +23,6 @@ export const TripDetail = () => {
   const heightBrowser = window.innerHeight;
 
   const handleGoBack = () => {
-    console.log("go back");
   };
 
   const handleChangeFormData = (key: string) => {

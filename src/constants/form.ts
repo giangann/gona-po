@@ -610,7 +610,7 @@ export const blogAndTipHomePage = {
       date: "Ngày 16 tháng 6",
       view: 193,
       image:
-        "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        "https://picsum.photos/id/9/1980/1720",
     },
     {
       id: 1,
@@ -619,7 +619,7 @@ export const blogAndTipHomePage = {
       date: "Ngày 16 tháng 6",
       view: 193,
       image:
-        "https://eqx-assets-prod.imgix.net/files/4cc6dd7c8e024a50a3c92bcad02e276d-victor-xok-jxmmltiqpk8-unsplash.jpg?auto=format&fit=crop&ixlib=react-8.6.4&w=1946",
+        "https://picsum.photos/id/9/1980/1720",
     },
   ],
 };

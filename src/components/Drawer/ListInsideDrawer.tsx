@@ -20,7 +20,6 @@ export const ListInsideDrawer = (props: ListInsideDrawerProps) => {
   const navigate = useNavigate();
 
   const handleToogleLanguage = () => {
-    console.log("toogle language");
   };
 
   const carouselItems = allTripsData.map((item, index) => (

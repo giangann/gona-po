@@ -53,7 +53,6 @@ export const Banner = () => {
       setBannerContent(bannerFormContent as any);
       setTripId(tripData.id);
     } else {
-      console.log("not");
     }
   }, [params]);
   return (

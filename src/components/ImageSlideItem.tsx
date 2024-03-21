@@ -33,9 +33,6 @@ export const ImageSlideItem = (props: ImageSlideItemProps) => {
     window.scrollTo(0, heightBrowser * (image.id + 1));
   }
 
-  // useEffect(() => {
-  //   console.log("animation change", animateAtom);
-  // }, [animationAtom]);
   return (
     <Container
       maxWidth="lg"
